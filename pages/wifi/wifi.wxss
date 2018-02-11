@@ -1,1 +1,3 @@
-/* pages/wifi/wifi.wxss */
+page{
+  padding: 60rpx;
+}

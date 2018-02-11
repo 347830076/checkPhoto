@@ -1,2 +1,5 @@
-<!--pages/gps/gps.wxml-->
-<text>pages/gps/gps.wxml</text>
+<view class='container'>
+  <button bindtap="openMap" hidden='{{flag}}'>开始检测</button>
+  <button bindtap="openMap" style='background-color:#fff;color:#000;' hidden='{{!flag}}'>重新检测</button>
+  <button bindtap="over" hidden='{{!flag}}'>检测完毕</button>
+</view>

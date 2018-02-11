@@ -46,5 +46,9 @@
     <text class='rowCon_l'>用户字体大小设置：</text>
     <text>{{fontSizeSetting}}</text>
   </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>是否支持NFC：</text>
+    <text>{{nfc}}</text>
+  </view>
   <button bindtap="bindViewTap">开始检测</button>
 </view>

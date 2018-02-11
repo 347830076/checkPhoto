@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    nfc:'',
   },
   //事件处理函数
   bindViewTap: function() {
@@ -34,6 +35,19 @@ Page({
           system: res.system,
           fontSizeSetting: res.fontSizeSetting + "px"
         })
+      }
+    })
+    wx.getHCEState({
+      success: function (res) {
+        console.log(res.errCode);
+        that.setData({
+          nfc:'支持'
+        });
+      }, fail: function (res){
+        console.log('fail',res)
+        that.setData({
+          nfc: '不支持'
+        });
       }
     })
   }

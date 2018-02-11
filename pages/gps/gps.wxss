@@ -1,1 +1,21 @@
-/* pages/gps/gps.wxss */
+page {
+  padding: 30rpx;
+}
+
+.container {
+  padding: 30rpx 60rpx;
+  background-color: #fff;
+}
+
+.imgCon {
+  display: block;
+  width: 400rpx;
+  margin: 0 auto;
+}
+.tip{
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+button{
+  margin: 20rpx 0; 
+}

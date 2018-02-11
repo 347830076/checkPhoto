@@ -63,7 +63,7 @@
     </view>
     <text class='arrows' data-url="gps"></text>
   </view>
-  <view class='row' bindtap="toView" data-url="accelerometer" hover-class="hoverbg">
+  <!-- <view class='row' bindtap="toView" data-url="accelerometer" hover-class="hoverbg">
     <text class='row_l' data-url="accelerometer">加速仪检测</text>
    <view class='row_m'>
        <view class='pass' hidden="{{info.accelerometer != 1}}" data-url="accelerometer">通过</view> 
@@ -78,6 +78,6 @@
        <view class='no_pass' hidden="{{info.compass != 2}}" data-url="compass">不通过</view>
     </view>
     <text class='arrows' data-url="compass"></text>
-  </view>
+  </view> -->
 </view>
-<button bindtap="bindViewTap" style='margin:30rpx;'>生成报告</button>
+<!-- <button bindtap="bindViewTap" style='margin:30rpx;'>生成报告</button> -->

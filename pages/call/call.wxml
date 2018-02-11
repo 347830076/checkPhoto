@@ -1,2 +1,8 @@
-<!--pages/call/call.wxml-->
-<text>pages/call/call.wxml</text>
+<view class='container'>
+  <view class='tip'>
+    测试拨打电话：10086
+  </view>
+  <button bindtap="call" hidden='{{flag}}'>开始检测</button>
+  <button bindtap="call" style='background-color:#fff;color:#000;' hidden='{{!flag}}'>重新检测</button>
+  <button bindtap="over" hidden='{{!flag}}'>检测完毕</button>
+</view>
