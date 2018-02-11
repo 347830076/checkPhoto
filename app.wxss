@@ -1,0 +1,28 @@
+page{
+    font-size: 28rpx;
+    color: #333;
+    background-color: #efeff4;
+    box-sizing: border-box;
+}
+view,text,textarea{
+    box-sizing: border-box;
+}
+text{
+  display: inline-block;
+}
+.clearfix::after{
+    clear: both;
+    content: "";
+    display: block;
+    height: 0px;
+    visibility: hidden;
+}
+
+button{
+  color:#fff;
+  background-color: #3CC51F;
+}
+.button-hover{
+  background-color: #3CC51F;
+}
+

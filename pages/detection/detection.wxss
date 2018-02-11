@@ -1,0 +1,40 @@
+.rowCon{
+  background-color: #fff;
+  padding: 30rpx 0 0 30rpx;
+}
+.row{
+  position: relative;
+  border-bottom: 1rpx solid #e4e4e4;
+  padding: 30rpx 20rpx;
+}
+.rowCon .row:last-child{
+  border-bottom: none;
+}
+.hoverbg{
+  background-color: #efeff4;
+}
+.row_l{
+  width: 300rpx;
+}
+.row_m{
+  display: inline-block;
+}
+.arrows{
+  position: absolute;
+  right: 30rpx;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  width: 20rpx;
+  height: 20rpx;
+  border: 1rpx solid #999;
+  border-color: #999 #999 transparent transparent;
+}
+.pass{
+  display: inline-block;
+  color: #3CC51F;
+}
+.no_pass{
+  display: inline-block;
+   color: #ff0000;
+}

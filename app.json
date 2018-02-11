@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detection/detection",
+    "pages/accelerometer/accelerometer",
+    "pages/bluetooth/bluetooth",
+    "pages/call/call",
+    "pages/camera/camera",
+    "pages/compass/compass",
+    "pages/gps/gps",
+    "pages/screen_show/screen_show",
+    "pages/screen_touch/screen_touch",
+    "pages/trumpet/trumpet",
+    "pages/wifi/wifi",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

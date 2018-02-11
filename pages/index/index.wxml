@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='tip'>系统检测到你的设备为</view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>手机品牌：</text>
+    <text>{{brand}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>手机型号：</text>
+    <text>{{model}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>设备像素比：</text>
+    <text>{{pixelRatio}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>屏幕宽度：</text>
+    <text>{{screenWidth}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>屏幕高度：</text>
+    <text>{{screenHeight}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>可使用窗口宽度：</text>
+    <text>{{windowWidth}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>可使用窗口高度：</text>
+    <text>{{windowHeight}}</text>
+  </view>
+
+  <view class='rowCon'>
+    <text class='rowCon_l'>微信版本号：</text>
+    <text>{{version}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>操作系统版本：</text>
+    <text>{{system}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>客户端平台：</text>
+    <text>{{platform}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>用户字体大小设置：</text>
+    <text>{{fontSizeSetting}}</text>
+  </view>
+  <button bindtap="bindViewTap">开始检测</button>
+</view>

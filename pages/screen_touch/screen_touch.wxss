@@ -1,0 +1,25 @@
+page{
+  height: 100%;
+  background-color: #fff;
+}
+.rowCon>view:last-child{
+  margin-bottom: 0 !important;
+}
+.row{
+  width: 100%;
+}
+.row text{
+  float: left;
+  width: 24.31%;
+  margin-right: 0.92%;
+}
+
+.row text:last-child{
+  margin-right: 0;
+}
+.pink{
+  background-color: #ff3366;
+}
+.green{
+  background-color: #3CC51F;
+}

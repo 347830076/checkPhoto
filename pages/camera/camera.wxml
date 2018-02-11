@@ -1,0 +1,6 @@
+<view class='container'>
+<image class='imgCon' src='{{imgSrc}}' hidden='{{!imgSrc}}' mode="widthFix"></image>
+ <button bindtap="camera" hidden='{{imgSrc}}'>开始拍照检测</button>
+ <button bindtap="camera" style='background-color:#fff;color:#000;' hidden='{{!imgSrc}}'>重新拍照检测</button>
+ <button bindtap="over" hidden='{{!imgSrc}}'>检测完毕</button>
+</view>

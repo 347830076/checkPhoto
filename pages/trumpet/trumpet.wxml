@@ -1,0 +1,6 @@
+<view class='container'>
+ <button bindtap="voice" hidden='{{flag}}'>开始检测</button>
+ <button bindtap="voice_stop" style='background-color:#fff;color:#000;' hidden='{{!flag}}'>停止播放</button>
+ <button bindtap="voice" style='background-color:#fff;color:#000;' hidden='{{!flag}}'>重新播放</button>
+ <button bindtap="over" hidden='{{!flag}}'>检测完毕</button>
+</view>

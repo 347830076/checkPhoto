@@ -1,0 +1,7 @@
+<view class='rowCon' bind:touchmove="touchCell" bind:touchstart="touchCell">
+  <view class='row clearfix' wx:for="{{colorArr}}" wx:for-item="colorArrRow" wx:key="{{index}}" style="margin-bottom:{{marginB}}">
+    <block wx:for="{{colorArrRow}}" wx:for-item="item" wx:for-index="idx" wx:key="{{idx}}">
+      <text class="{{item.class == 0 ? 'pink' : 'green'}}" style="height:{{height}};" ></text>
+    </block>
+  </view>
+</view>
