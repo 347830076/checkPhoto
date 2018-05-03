@@ -24,6 +24,10 @@ Page({
         }
       }
     })
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: '#000000'
+    })
   },
   //点击屏幕
   clickScreen: function () {
@@ -35,18 +39,38 @@ Page({
     if (num == 1) {
       that.setData({
         bgColor: 'black'
-      })
+      })  
     } else if (num == 2) {
       that.setData({
         bgColor: 'white'
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#000000',
+        backgroundColor: '#ffffff'
       })
     } else if (num == 3) {
       that.setData({
         bgColor: 'blue'
       })
+      wx.setNavigationBarColor({
+        frontColor: '#000000',
+        backgroundColor: 'blue'
+      })
     } else if (num == 4) {
       that.setData({
         bgColor: 'yellow'
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#000000',
+        backgroundColor: 'yellow'
+      })
+    } else if (num == 5) {
+      that.setData({
+        bgColor: 'grey'
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#000000',
+        backgroundColor: '#cccccc'
       })
     } else {
       wx.getStorage({

@@ -43,7 +43,6 @@ Page({
         })
       },fail:function(res){
         console.log('fail',res)
-        if(res.errCode == '10001'){
           wx.showModal({
             title: '温馨提示',
             content: '请打开蓝牙进行测试',
@@ -54,7 +53,6 @@ Page({
               })
             }
           })
-        }
       }
     })
   },

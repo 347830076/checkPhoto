@@ -13,7 +13,8 @@ Page({
       wifi: 0,
       bluetooth: 0,
       accelerometer: 0,
-      compass: 0
+      compass: 0,
+      gps: 0
     }
   },
 

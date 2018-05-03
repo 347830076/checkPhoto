@@ -1,0 +1,84 @@
+<view class='rowCon'>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l'>机型</text>
+    <view class='row_m'>
+      <view class=''>{{brand}} {{model}}</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l'>操作系统</text>
+    <view class='row_m'>
+      <view class=''>{{system}}</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l'>语言</text>
+    <view class='row_m'>
+      <view class=''>{{language}}</view>
+    </view>
+  </view>
+  <view class='row'  hover-class="hoverbg">
+    <text class='row_l' data-url="screen_show">屏幕显示检测</text>
+    <view class='row_m' data-url="screen_show">
+      <view class='' hidden="{{info.screen_show != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.screen_show != 1}}" data-url="screen_show">通过</view>
+      <view class='no_pass' hidden="{{info.screen_show != 2}}" data-url="screen_show">不通过</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="screen_touch">屏幕触摸检测</text>
+    <view class='row_m' data-url="screen_touch">
+      <view class='' hidden="{{info.screen_touch != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.screen_touch != 1}}" data-url="screen_touch">通过</view>
+      <view class='no_pass' hidden="{{info.screen_touch != 2}}" data-url="screen_touch">不通过</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="camera">摄像头检测</text>
+    <view class='row_m' data-url="camera">
+      <view class='' hidden="{{info.camera != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.camera != 1}}" data-url="camera">通过</view>
+      <view class='no_pass' hidden="{{info.camera != 2}}" data-url="camera">不通过</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="trumpet">喇叭检测</text>
+    <view class='row_m' data-url="trumpet">
+      <view class='' hidden="{{info.trumpet != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.trumpet != 1}}" data-url="trumpet">通过</view>
+      <view class='no_pass' hidden="{{info.trumpet != 2}}" data-url="trumpet">不通过</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="call">通话功能检测</text>
+    <view class='row_m'>
+      <view class='' hidden="{{info.call != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.call != 1}}" data-url="call">通过</view>
+      <view class='no_pass' hidden="{{info.call != 2}}" data-url="call">不通过</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="wifi">wifi功能检测</text>
+    <view class='row_m'>
+      <view class='' hidden="{{info.wifi != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.wifi != 1}}" data-url="wifi">通过</view>
+      <view class='no_pass' hidden="{{info.wifi != 2}}" data-url="wifi">不通过</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="bluetooth">蓝牙功能检测</text>
+    <view class='row_m'>
+      <view class='' hidden="{{info.bluetooth != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.bluetooth != 1}}" data-url="bluetooth">通过</view>
+      <view class='no_pass' hidden="{{info.bluetooth != 2}}" data-url="bluetooth">不通过</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="gps">GPS功能检测</text>
+    <view class='row_m'>
+      <view class='' hidden="{{info.gps != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.gps != 1}}" data-url="gps">通过</view>
+      <view class='no_pass' hidden="{{info.gps != 2}}" data-url="gps">不通过</view>
+    </view>
+  </view>
+</view>

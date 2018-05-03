@@ -12,6 +12,7 @@
     "pages/screen_touch/screen_touch",
     "pages/trumpet/trumpet",
     "pages/wifi/wifi",
+    "pages/report/report",
     "pages/logs/logs"
   ],
   "window":{

@@ -31,7 +31,7 @@
 				{
 					"id": 0,
 					"name": "检测列表",
-					"pathName": "pages/detection/detection",
+					"pathName": "pages/report/report",
 					"query": ""
 				},
 				{

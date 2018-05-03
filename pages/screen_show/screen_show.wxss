@@ -23,3 +23,6 @@ page{
 .yellow{
   background-color: #ffff00;
 }
+.grey{
+  background-color: #cccccc;
+}

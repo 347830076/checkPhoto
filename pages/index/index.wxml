@@ -47,6 +47,10 @@
     <text>{{fontSizeSetting}}</text>
   </view>
   <view class='rowCon'>
+    <text class='rowCon_l'>当前网络状态:</text>
+    <text>{{networkType}}</text>
+  </view>
+  <view class='rowCon'>
     <text class='rowCon_l'>是否支持NFC：</text>
     <text>{{nfc}}</text>
   </view>

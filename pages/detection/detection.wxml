@@ -80,4 +80,4 @@
     <text class='arrows' data-url="compass"></text>
   </view> -->
 </view>
-<!-- <button bindtap="bindViewTap" style='margin:30rpx;'>生成报告</button> -->
+ <button bindtap="toView" data-url="report" style='margin:30rpx;'>生成报告</button> 
