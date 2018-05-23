@@ -1,0 +1,36 @@
+page{
+  padding: 30rpx;
+}
+.main{
+  padding: 60rpx 0;
+  background-color: #fff;
+}
+.tip{
+  text-align: center;
+  color: #999;
+}
+.yuan{
+  position: relative;
+  width: 600rpx;
+  height: 600rpx;
+  /* border: 1px solid #e4e4e4; */
+  /* border-radius:100%;  */
+  margin: 30rpx auto 0;
+}
+.numCon{
+  position: absolute;
+  /* left: 50%;
+  top: 50%; */
+  transform: translateX(-50%) translateY(-50%);
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+  background-color: #3CC51F;
+}
+.xyz{
+  padding: 100rpx 60rpx 0;
+  text-align: center;
+}
+button{
+  margin: 20rpx 0; 
+}

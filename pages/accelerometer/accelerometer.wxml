@@ -1,1 +1,12 @@
-
+<view class='main'>
+  <view class='tip'>倾斜手机即可移动下方小球</view>
+  <view class='yuan'>
+    <view class='numCon' style='top:{{top}};left:{{left}}'></view>
+  </view>
+  <view class='xyz'>
+    <text style='float:left'>X : {{x}}</text>
+    <text>Y : {{y}}</text>
+    <text style='float:right;'>Z : {{z}}</text>
+  </view>
+</view>
+<button bindtap="over">检测完毕</button>

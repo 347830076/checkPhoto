@@ -81,4 +81,21 @@
       <view class='no_pass' hidden="{{info.gps != 2}}" data-url="gps">不通过</view>
     </view>
   </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="accelerometer">加速仪检测</text>
+    <view class='row_m'>
+      <view class='' hidden="{{info.accelerometer != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.accelerometer != 1}}" data-url="accelerometer">通过</view>
+      <view class='no_pass' hidden="{{info.accelerometer != 2}}" data-url="accelerometer">不通过</view>
+    </view>
+  </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="compass">罗盘检测</text>
+    <view class='row_m'>
+      <view class='' hidden="{{info.compass != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.compass != 1}}" data-url="compass">通过</view>
+      <view class='no_pass' hidden="{{info.compass != 2}}" data-url="compass">不通过</view>
+    </view>
+  </view>
 </view>
+<view class='footer'>本人微信：cylyiou</view>

@@ -1,2 +1,10 @@
-<!--pages/compass/compass.wxml-->
-<text>pages/compass/compass.wxml</text>
+<view class='main'>
+  <view class='tip'>旋转手机即可获取方位信息</view>
+  <view class='yuan'>
+    <view class='numCon'>
+      <text class='num'>{{num}}</text>
+      <text class='du'>o</text>
+    </view>
+  </view>
+</view>
+<button bindtap="over">检测完毕</button>

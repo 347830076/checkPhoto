@@ -1,1 +1,36 @@
-/* pages/compass/compass.wxss */
+page{
+  padding: 30rpx;
+}
+.main{
+  padding: 60rpx 0;
+  background-color: #fff;
+}
+.tip{
+  text-align: center;
+  color: #999;
+}
+.yuan{
+  position: relative;
+  width: 600rpx;
+  height: 600rpx;
+  border: 1px solid #ccc;
+  border-radius:100%; 
+  margin: 30rpx auto 0;
+}
+.numCon{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.num{
+  font-size: 200rpx;
+  vertical-align: top;
+}
+.du{
+  font-size: 50rpx;
+  vertical-align: top;
+}
+button{
+  margin: 20rpx 0; 
+}
