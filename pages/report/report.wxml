@@ -97,5 +97,14 @@
       <view class='no_pass' hidden="{{info.compass != 2}}" data-url="compass">不通过</view>
     </view>
   </view>
+  <view class='row' hover-class="hoverbg">
+    <text class='row_l' data-url="vibrate">手机振动</text>
+    <view class='row_m'>
+      <view class='' hidden="{{info.vibrate != 0}}">未检测</view>
+      <view class='pass' hidden="{{info.vibrate != 1}}" data-url="vibrate">通过</view>
+      <view class='no_pass' hidden="{{info.vibrate != 2}}" data-url="vibrate">不通过</view>
+    </view>
+  </view>
 </view>
 <view class='footer'>本人微信：cylyiou</view>
+<service></service>

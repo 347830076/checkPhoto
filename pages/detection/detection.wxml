@@ -79,5 +79,13 @@
     </view>
     <text class='arrows' data-url="compass"></text>
   </view>
+  <view class='row' bindtap="vibrate" data-url="vibrate" hover-class="hoverbg">
+    <text class='row_l' data-url="vibrate">手机振动</text>
+    <view class='row_m'>
+       <view class='pass' hidden="{{info.vibrate != 1}}" data-url="vibrate">通过</view> 
+       <view class='no_pass' hidden="{{info.vibrate != 2}}" data-url="vibrate">不通过</view>
+    </view>
+    <text class='arrows' data-url="vibrate"></text>
+  </view>
 </view>
  <button bindtap="toView" data-url="report" style='margin:30rpx;'>生成报告</button> 

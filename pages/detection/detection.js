@@ -14,7 +14,8 @@ Page({
       bluetooth: 0,
       accelerometer: 0,
       compass: 0,
-      gps: 0
+      gps: 0,
+      vibrate:0
     }
   },
 
@@ -79,7 +80,27 @@ Page({
   onHide: function () {
 
   },
+  //手机振动
+  vibrate:function(){
+    let that = this;
+    wx.vibrateLong({
+      success:function(){
+        let info = that.data.info;
+        info.vibrate = 1;
+        that.setData({
+          info: info
+        })
+        wx.setStorage({
+          key: "info",
+          data: info,
+          success: function () {
+          }
+        })
+      },fail:function(){
 
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面卸载
    */

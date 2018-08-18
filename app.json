@@ -13,6 +13,7 @@
     "pages/trumpet/trumpet",
     "pages/wifi/wifi",
     "pages/report/report",
+    "pages/vibrate/vibrate",
     "pages/logs/logs"
   ],
   "window":{

@@ -56,3 +56,4 @@
   </view>
   <button bindtap="bindViewTap">开始检测</button>
 </view>
+<service></service>
