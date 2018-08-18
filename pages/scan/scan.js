@@ -34,11 +34,7 @@ Page({
     wx.setClipboardData({
       data: e.target.dataset.result,
       success: function (res) {
-        wx.showToast({
-          title: '复制成功',
-          icon: 'none',
-          duration: 2000
-        })
+        
       },fail:function(){
         wx.showToast({
           title: '复制失败，请重新复制',
