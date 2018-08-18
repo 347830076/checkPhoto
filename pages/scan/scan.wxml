@@ -1,0 +1,15 @@
+<view class='main'>
+  <view class='main_row clearfix'>
+    <view class='main_row_l'>所扫码内容：</view>
+    <view class='main_row_r'>{{result}}<text data-result="{{result}}" bindtap='copy'>复制</text></view>
+  </view>
+  <view class='main_row clearfix'>
+    <view class='main_row_l'>所扫码类型：</view>
+    <view class='main_row_r'>{{scanType}}</view>
+  </view>
+  <view class='main_row clearfix'>
+    <view class='main_row_l'>所扫码的字符集：</view>
+    <view class='main_row_r'>{{charSet}}</view>
+  </view>
+  <button bindtap="scanFun">扫码</button>
+</view>

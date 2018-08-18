@@ -15,7 +15,7 @@
   background-color: #efeff4;
 }
 .row_l{
-  width: 300rpx;
+  width: 500rpx;
 }
 .row_m{
   display: inline-block;
@@ -30,12 +30,4 @@
   height: 20rpx;
   border: 1rpx solid #999;
   border-color: #999 #999 transparent transparent;
-}
-.pass{
-  display: inline-block;
-  color: #3CC51F;
-}
-.no_pass{
-  display: inline-block;
-   color: #ff0000;
 }

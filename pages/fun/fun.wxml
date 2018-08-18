@@ -1,0 +1,6 @@
+<view class='rowCon'>
+  <view class='row' bindtap="toView" data-url="screen_show" hover-class="hoverbg">
+    <text class='row_l' data-url="screen_show">扫码二维码/条形码得到信息</text>
+    <text class='arrows'  data-url="screen_show"></text>
+  </view>
+</view>

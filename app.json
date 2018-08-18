@@ -14,6 +14,8 @@
     "pages/wifi/wifi",
     "pages/report/report",
     "pages/vibrate/vibrate",
+    "pages/fun/fun",
+    "pages/scan/scan",
     "pages/logs/logs"
   ],
   "window":{
@@ -21,5 +23,24 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
-  }
+  },
+  "tabBar": {
+    "color": "#e6e6e6",
+    "selectedColor": "#308BFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"image/index.png",
+        "selectedIconPath":"image/index_h.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/fun/fun",
+        "iconPath": "image/fun.png",
+        "selectedIconPath": "image/fun_h.png",
+        "text": "小功能"
+      }
+    ]
+  },
+  "debug": true
 }
