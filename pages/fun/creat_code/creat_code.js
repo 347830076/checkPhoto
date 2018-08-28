@@ -1,4 +1,4 @@
-// pages/scan/scan.js
+// pages/fun/creat_code/creat_code.js
 Page({
 
   /**
@@ -12,38 +12,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.scanFun();
-  },
-  scanFun:function(){
-    // 允许从相机和相册扫码
-    let that = this;
-    wx.scanCode({
-      success: (res) => {
-        console.log(res);
-        that.setData({
-          result: res.result,
-          scanType: res.scanType == "QR_CODE" ? "二维码" : "条型码",
-          charSet: res.charSet,
-        })
 
-      }
-    })
   },
-  copy:function(e){
-    console.log(e)
-    wx.setClipboardData({
-      data: e.target.dataset.result,
-      success: function (res) {
-        
-      },fail:function(){
-        wx.showToast({
-          title: '复制失败，请重新复制',
-          icon: 'none',
-          duration: 2000
-        })
-      }
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

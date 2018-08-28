@@ -1,4 +1,3 @@
-<!--index.wxml-->
 <view class="container">
   <view class='tip'>系统检测到你的设备为</view>
   <view class='rowCon'>
@@ -57,3 +56,4 @@
   <button bindtap="bindViewTap">开始检测</button>
 </view>
 <service></service>
+<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>

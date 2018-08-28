@@ -15,7 +15,8 @@
     "pages/report/report",
     "pages/vibrate/vibrate",
     "pages/fun/fun",
-    "pages/scan/scan",
+    "pages/fun/scan/scan",
+    "pages/fun/creat_code/creat_code",
     "pages/logs/logs"
   ],
   "window":{
@@ -25,7 +26,7 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "color": "#e6e6e6",
+    "color": "#cdcdcd",
     "selectedColor": "#308BFF",
     "list": [
       {

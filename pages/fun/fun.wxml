@@ -3,4 +3,9 @@
     <text class='row_l' data-url="scan">扫码二维码/条形码得到信息</text>
     <text class='arrows'  data-url="scan"></text>
   </view>
+  <view class='row' bindtap="toView" data-url="creat_scan" hover-class="hoverbg">
+    <text class='row_l' data-url="scan">生成二维码</text>
+    <text class='arrows'  data-url="scan"></text>
+  </view>
 </view>
+<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>
