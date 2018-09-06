@@ -1,0 +1,20 @@
+page{
+  padding: 0 30rpx;
+}
+.row{
+  margin-top: 20rpx;
+}
+.cook_titile{
+  font-size: 32rpx;
+}
+.cook_type{
+  text-indent: 2em;
+}
+.cook_type_t{
+  font-size: 30rpx;
+}
+.cook_type_d text{
+  font-size: 28rpx;  
+  color: #01AAED;
+  line-height: 48rpx;
+}

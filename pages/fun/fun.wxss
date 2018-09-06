@@ -2,6 +2,7 @@
   background-color: #fff;
   padding-left: 30rpx;
   margin-top: 30rpx;
+  margin-bottom: 40rpx;
 }
 .row{
   position: relative;
@@ -30,4 +31,7 @@
   height: 20rpx;
   border: 1rpx solid #999;
   border-color: #999 #999 transparent transparent;
+}
+.btn{
+  padding: 30rpx;
 }

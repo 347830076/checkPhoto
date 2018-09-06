@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "手机检测",
+  "navigationBarTitleText": "小功能",
   "usingComponents": {
     "service": "../../template/service/service"
   }

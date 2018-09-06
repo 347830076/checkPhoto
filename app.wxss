@@ -19,6 +19,8 @@ text{
 }
 
 button{
+  height: 100rpx;
+  line-height: 100rpx;
   color:#fff;
   background-color: #3CC51F;
 }
@@ -26,3 +28,46 @@ button{
   background-color: #3CC51F;
 }
 
+
+.border_t,.border_b,.border_r,.border_l{
+	position: relative;
+}
+.border_t::before,.border_b::before{
+	position: absolute;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 1rpx;
+	background-color: #ccc;
+	-webkit-transform: scaleY(0.5);
+	-moz-transform: scaleY(0.5);
+	-ms-transform: scaleY(0.5);
+	-o-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+.border_t::before{
+	top: 0;
+}
+.border_b::before{
+	bottom: 0;
+}
+
+.border_r:after,.border_l:after{
+	position: absolute;
+	top: 0;
+	content: "";
+	width: 1rpx;
+	height: 100%;
+	background-color: #ccc;
+	-webkit-transform: scaleX(0.5);
+	-moz-transform: scaleX(0.5);
+	-ms-transform: scaleX(0.5);
+	-o-transform: scaleX(0.5);
+	transform: scaleX(0.5);
+}
+.border_r:after{
+	right: 0;
+}
+.border_l:after{
+	left: 0;
+}

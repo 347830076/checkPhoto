@@ -1,2 +1,11 @@
-<!--pages/fun/creat_code/creat_code.wxml-->
-<text>pages/fun/creat_code/creat_code.wxml</text>
+<view class='top'>
+  <input type='text' placeholder='请输入内容' bindinput="bindKeyInput" />
+  <button bindtap="comfirm">确定</button>
+</view>
+
+<view class='info' hidden='{{!imgPath}}'>
+  <text>生成的二维码</text>
+  <image src='{{imgPath}}'></image>
+  <button catchtap='save'>保存到相册</button>
+</view>
+<canvas id='myCanvas' canvas-id="myCanvas" style="border: 1px solid;"/>

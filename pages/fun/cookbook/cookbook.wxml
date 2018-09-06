@@ -1,0 +1,9 @@
+<view class='row' wx:for="{{info}}" wx:key="{{index}}">
+  <view class='cook_titile'>{{index}}</view>
+  <view class='cook_type' wx:for="{{item}}" wx:for-item="j" wx:key="{{index}}">
+    <view class='cook_type_t'>{{index}}</view>
+    <view class='cook_type_d'>
+      <text wx:for="{{j}}" wx:for-item="k" wx:key="{{index}}">{{k}}</text>
+    </view>
+  </view>
+</view>

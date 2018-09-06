@@ -1,1 +1,28 @@
-/* pages/fun/creat_code/creat_code.wxss */
+.top{
+  padding: 30rpx;
+}
+.top>input{
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1rpx solid #e4e4e4;
+  padding-left: 20rpx;
+  background-color: #fff;
+  margin-bottom: 40rpx;
+}
+.info{
+  text-align: center;
+  padding: 30rpx;
+}
+.info text{
+  font-size: 40rpx;
+  margin-bottom: 20rpx;
+}
+.info image{
+  display: block;
+  width: 400rpx;
+  height: 400rpx;
+  margin: 0 auto 40rpx;
+}
+#myCanvas{
+  display: none;
+}

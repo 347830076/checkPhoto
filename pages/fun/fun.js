@@ -16,9 +16,10 @@ Page({
   },
   //跳转页面
   toView: function (e) {
-    var name = e.target.dataset.url;
+    console.log(e);
+    let name = e.currentTarget.dataset.url;
     wx.navigateTo({
-      url: '/' + name + '/' + name
+      url: './' + name + '/' + name
     })
   },
   /**

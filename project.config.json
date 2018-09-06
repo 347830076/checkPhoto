@@ -1,11 +1,12 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.3",
@@ -30,7 +31,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -40,14 +41,26 @@
 				},
 				{
 					"id": 1,
-					"name": "1",
-					"pathName": "pages/wifi/wifi",
+					"name": "生成二维码",
+					"pathName": "pages/fun/creat_code/creat_code",
 					"query": ""
 				},
 				{
 					"id": -1,
 					"name": "扫码",
-					"pathName": "pages/scan/scan"
+					"pathName": "pages/scan/scan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "回答问题",
+					"pathName": "pages/fun/answer/answer",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "菜谱大全",
+					"pathName": "pages/fun/cookbook/cookbook"
 				}
 			]
 		}
