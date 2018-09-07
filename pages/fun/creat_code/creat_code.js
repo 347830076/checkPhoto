@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    val:null,
-    imgPath:null
+    val: null,
+    imgPath: null
   },
 
   /**
@@ -15,16 +15,16 @@ Page({
   onLoad: function (options) {
 
   },
-  bindKeyInput:function(e){
+  bindKeyInput: function (e) {
     console.log(e.detail.value);
     this.setData({
-      val:e.detail.value
+      val: e.detail.value
     })
   },
-  comfirm:function(){
+  comfirm: function () {
     let that = this;
     let val = this.data.val;
-    if(!val){
+    if (!val) {
       wx.showToast({
         title: '请输入内容',
         icon: 'none',
@@ -34,7 +34,7 @@ Page({
     }
 
     wx.request({
-      url: 'https://apis.juhe.cn/qrcode/api?key=76ee00a4a1a6371e70e33693dd26aa56&type=1&fgcolor=00b7ee&w=90&m=5&text=' + val,
+      url: 'https://apis.juhe.cn/qrcode/api?key=76ee00a4a1a6371e70e33693dd26aa56&type=1&fgcolor=00b7ee&w=300&m=5&text=' + val,
       data: {
         x: '',
         y: ''
@@ -44,11 +44,11 @@ Page({
       },
       success: function (res) {
         console.log(res)
-        if(res.data.error_code === 0){
+        if (res.data.error_code === 0) {
           that.setData({
-            imgPath: 'data:image/png;base64,'+res.data.result.base64_image
+            imgPath: 'data:image/png;base64,' + res.data.result.base64_image
           })
-        }else{
+        } else {
           wx.showToast({
             title: '请求错误，请重新点击确定',
             icon: 'none',
@@ -58,12 +58,14 @@ Page({
       }
     })
   },
-  save:function(){
+  save: function () {
     let that = this;
     console.log(that.data.imgPath)
     const ctx = wx.createCanvasContext('myCanvas');
     ctx.drawImage(that.data.imgPath, 0, 0, 150, 150);
-    ctx.draw(true,function(){
+
+    ctx.draw(true, function () {
+
       wx.canvasToTempFilePath({
         x: 0,
         y: 0,
@@ -82,11 +84,12 @@ Page({
               console.log(res)
             }
           })
+        }, fail(res) {
+          console.log('canvasToTempFilePath', res)
         }
       })
+
     });
-   
-    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

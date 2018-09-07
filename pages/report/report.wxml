@@ -106,5 +106,8 @@
     </view>
   </view>
 </view>
+<view class='btn'>
+<button open-type="share">赶紧分享到群里，看大家手机有没有故障</button>
+</view>
 <view class='footer'>本人微信：cylyiou</view>
 <service></service>

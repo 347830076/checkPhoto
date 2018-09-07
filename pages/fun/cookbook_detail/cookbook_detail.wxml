@@ -1,0 +1,18 @@
+
+<view class="fqaCon">
+  <view class="fqa_row" wx:for="{{data}}" wx:key="{{index}}">
+    <view class="fqa_row_t border_b" catchtap="taggle" data-index="{{index}}">
+      <view class="fqa_title" catchtap="taggle" data-index="{{index}}">{{item.cpName}}</view>
+      <view class="arrows {{item.flag ? 'arrows_down' : 'arrows_up'}}" catchtap="taggle" data-index="{{index}}"></view>
+    </view>
+    <view hidden="{{!item.flag ? true : false}}" class="fqa_content border_b">
+      <view class='steps_title'>{{item.des}}</view>
+      <image class='imgC' src='{{item.smallImg}}' data-url="{{item.largeImg}}" catchtap='previewImage'></image>
+      <view class='steps' wx:for="{{item.steps}}" wx:key="{{index}}" wx:for-item="j">
+        <text class='steps_t'>步骤{{j.orderNum}}</text><text>{{j.content}}</text>
+      </view>
+      <view class='steps_tip'>{{item.tip}}</view>
+    </view>
+  </view>
+</view> 
+<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>

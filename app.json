@@ -18,6 +18,7 @@
     "pages/fun/scan/scan",
     "pages/fun/creat_code/creat_code",
     "pages/fun/cookbook/cookbook",
+    "pages/fun/cookbook_detail/cookbook_detail",
     "pages/fun/answer/answer",
     "pages/logs/logs"
   ],

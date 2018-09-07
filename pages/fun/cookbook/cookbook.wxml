@@ -1,9 +1,10 @@
 <view class='row' wx:for="{{info}}" wx:key="{{index}}">
   <view class='cook_titile'>{{index}}</view>
-  <view class='cook_type' wx:for="{{item}}" wx:for-item="j" wx:key="{{index}}">
-    <view class='cook_type_t'>{{index}}</view>
+  <view class='cook_type' wx:for="{{item}}" wx:for-item="j" wx:for-index="index2" wx:key="{{index2}}">
+    <view class='cook_type_t'>{{index2}}</view>
     <view class='cook_type_d'>
-      <text wx:for="{{j}}" wx:for-item="k" wx:key="{{index}}">{{k}}</text>
+      <text wx:for="{{j}}" wx:for-item="k" wx:key="{{index3}}" wx:for-index="index3" data-type_="{{index2}}" data-cpname="{{k}}" catchtap='toView'>{{k}}</text>
     </view>
   </view>
 </view>
+<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>

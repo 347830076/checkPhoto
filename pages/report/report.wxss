@@ -1,11 +1,12 @@
 .rowCon{
   background-color: #fff;
   padding: 30rpx 0 0 30rpx;
+  margin-top: 20rpx;
 }
 .row{
   position: relative;
   border-bottom: 1rpx solid #e4e4e4;
-  padding: 20rpx 20rpx;
+  padding: 10rpx 20rpx;
 }
 .rowCon .row:last-child{
   border-bottom: none;
@@ -41,4 +42,7 @@
 .footer{
   text-align: center;
   margin-top: 40rpx;
+}
+.btn{
+  padding: 30rpx 30rpx 0;
 }
