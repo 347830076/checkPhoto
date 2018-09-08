@@ -19,8 +19,9 @@ text{
 }
 
 button{
-  height: 100rpx;
-  line-height: 100rpx;
+  font-size: 36rpx;
+  height: 90rpx;
+  line-height: 90rpx;
   color:#fff;
   background-color: #3CC51F;
 }

@@ -6,7 +6,7 @@
 .row{
   position: relative;
   border-bottom: 1rpx solid #e4e4e4;
-  padding: 30rpx 20rpx;
+  padding: 20rpx 20rpx;
 }
 .rowCon .row:last-child{
   border-bottom: none;

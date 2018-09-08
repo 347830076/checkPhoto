@@ -1,3 +1,7 @@
+<view class='btn'>
+  <button bindtap="bindViewTap">开始检测手机功能</button>
+</view>
+<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>
 <view class="container">
   <view class='tip'>系统检测到你的设备信息</view>
   <view class='rowCon'>
@@ -9,12 +13,20 @@
     <text>{{model}}</text>
   </view>
   <view class='rowCon'>
-    <text class='rowCon_l'>屏幕宽度：</text>
-    <text>{{screenWidth}}</text>
+    <text class='rowCon_l'>客户端平台：</text>
+    <text>{{platform}}</text>
   </view>
   <view class='rowCon'>
-    <text class='rowCon_l'>屏幕高度：</text>
-    <text>{{screenHeight}}</text>
+    <text class='rowCon_l'>操作系统版本：</text>
+    <text>{{system}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>微信版本号：</text>
+    <text>{{version}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>基础库版本：</text>
+    <text>{{SDKVersion}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>设备像素比：</text>
@@ -25,6 +37,14 @@
     <text>{{statusBarHeight}}</text>
   </view>
   <view class='rowCon'>
+    <text class='rowCon_l'>屏幕宽度：</text>
+    <text>{{screenWidth}}</text>
+  </view>
+  <view class='rowCon'>
+    <text class='rowCon_l'>屏幕高度：</text>
+    <text>{{screenHeight}}</text>
+  </view>
+  <view class='rowCon'>
     <text class='rowCon_l'>可使用窗口宽度：</text>
     <text>{{windowWidth}}</text>
   </view>
@@ -32,25 +52,6 @@
     <text class='rowCon_l'>可使用窗口高度：</text>
     <text>{{windowHeight}}</text>
   </view>
-  
-
-  <view class='rowCon'>
-    <text class='rowCon_l'>微信版本号：</text>
-    <text>{{version}}</text>
-  </view>
-  <view class='rowCon'>
-    <text class='rowCon_l'>客户端平台：</text>
-    <text>{{platform}}</text>
-  </view>
-  <view class='rowCon'>
-    <text class='rowCon_l'>基础库版本：</text>
-    <text>{{SDKVersion}}</text>
-  </view>
-  <view class='rowCon'>
-    <text class='rowCon_l'>操作系统版本：</text>
-    <text>{{system}}</text>
-  </view>
-  
   <view class='rowCon'>
     <text class='rowCon_l'>用户字体大小：</text>
     <text>{{fontSizeSetting}}</text>
@@ -59,12 +60,30 @@
     <text class='rowCon_l'>当前网络状态：</text>
     <text>{{networkType}}</text>
   </view>
+  <view hidden='{{!SSID}}'>
+    <view class='rowCon'>
+      <text class='rowCon_l'>WiFi名字：</text>
+      <text>{{SSID}}</text>
+    </view>
+    <view class='rowCon'>
+      <text class='rowCon_l'>WiFi地址：</text>
+      <text>{{BSSID}}</text>
+    </view>
+    <view class='rowCon'>
+      <text class='rowCon_l'>WiFi安全：</text>
+      <text>{{secure}}</text>
+    </view>
+    <view class='rowCon'>
+      <text class='rowCon_l'>WiFi信号：</text>
+      <text>{{signalStrength}}</text>
+    </view>
+  </view>
   <view class='rowCon'>
     <text class='rowCon_l'>是否支持NFC：</text>
     <text>{{nfc}}</text>
   </view>
-
-  <button bindtap="bindViewTap">开始检测</button>
+</view>
+<view class='btn'>
+  <button bindtap="setClip">复制设备信息</button>
 </view>
 <service></service>
-<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>

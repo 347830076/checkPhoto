@@ -17,7 +17,7 @@
       <view class=''>{{language}}</view>
     </view>
   </view>
-  <view class='row'  hover-class="hoverbg">
+  <view class='row' hover-class="hoverbg">
     <text class='row_l' data-url="screen_show">屏幕显示检测</text>
     <view class='row_m' data-url="screen_show">
       <view class='' hidden="{{info.screen_show != 0}}">未检测</view>
@@ -107,7 +107,5 @@
   </view>
 </view>
 <view class='btn'>
-<button open-type="share">赶紧分享到群里，看大家手机有没有故障</button>
+  <button open-type="share">赶紧分享到群里，看大家手机有没有故障</button>
 </view>
-<view class='footer'>本人微信：cylyiou</view>
-<service></service>

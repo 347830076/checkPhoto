@@ -1,5 +1,5 @@
 <view class='row' wx:for="{{info}}" wx:key="{{index}}">
-  <view class='cook_titile'>{{index}}</view>
+  <view class='cook_titile' hidden='{{(index == "flag") || (index == "ret_code")}}'>{{index}}</view>
   <view class='cook_type' wx:for="{{item}}" wx:for-item="j" wx:for-index="index2" wx:key="{{index2}}">
     <view class='cook_type_t'>{{index2}}</view>
     <view class='cook_type_d'>

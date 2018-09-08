@@ -1,17 +1,28 @@
-// pages/fun/cookbook/cookbook.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    info:null,
+    id:null
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    let that = this;
+    wx.getStorage({
+      key: 'infoCon',
+      success: function (res) {
+        // console.log(res.data);
+        if (res.data){
+          that.setData({
+            info: res.data.info,
+            id: res.data.id
+          });
+        }else{
+          that.ajax();
+        }
+      },fail(){
+        that.ajax();
+      }
+    })
+  },
+  ajax:function(){
     let that = this;
     function formatterDateTime() {
       var date = new Date()
@@ -33,7 +44,7 @@ Page({
           .getSeconds());
       return datetime;
     }
-    // return false;
+
     wx.request({
       url: 'https://route.showapi.com/1164-2',
       data: {
@@ -50,6 +61,13 @@ Page({
           that.setData({
             info: res.data.showapi_res_body,
             id: res.data.showapi_res_id
+          });
+          wx.setStorage({
+            key: "infoCon",
+            data: {
+              info: res.data.showapi_res_body,
+              id: res.data.showapi_res_id
+            }
           })
         } else {
           wx.showToast({

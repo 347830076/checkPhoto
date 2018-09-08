@@ -36,11 +36,11 @@ Page({
           system: res.system,
           fontSizeSetting: res.fontSizeSetting + "px",
           SDKVersion: res.SDKVersion,
-          statusBarHeight: res.statusBarHeight
+          statusBarHeight: res.statusBarHeight + "px"
         })
       }
     });
-    //监听网络状态变化。
+    //获取网络状态。
     wx.getNetworkType({
       success: function (res) {
         // 返回网络类型, 有效值：
@@ -60,7 +60,34 @@ Page({
         networkType: networkType !== 'none' ? networkType : "无网络"
       });
     });
-    
+    wx.startWifi({
+      success: function (res) {
+        console.log(res.errMsg);
+        //获取已连接中的 Wi-Fi 信息
+        wx.getConnectedWifi({
+          success: function (res) {
+            console.log('wifi_info:', res);
+            if (res.wifi) {
+              that.setData({
+                SSID: res.wifi.SSID,
+                BSSID: res.wifi.BSSID,
+                secure: res.wifi.secure ? "安全" : "危险",
+                signalStrength: res.wifi.signalStrength > 80 ? "强" : (signalStrength > 50 ? "中" : "弱"),
+              });
+            }
+          }, fail(res) {
+            console.log('wifi_info_fail:', res)
+          }, complete() {
+            wx.stopWifi({
+              success: function (res) {
+                console.log(res.errMsg)
+              }
+            })
+          }
+        })
+      }
+    })
+
     //判断当前设备是否支持 HCE 能力。
     wx.getHCEState({
       success: function (res) {
@@ -73,6 +100,19 @@ Page({
         that.setData({
           nfc: '不支持'
         });
+      }
+    })
+  },
+  //复制设备信息
+  setClip: function () {
+    let info = this.data;
+    let wifiInfo = '';
+    if (info.SSID) {
+      wifiInfo = "\n\r WiFi名字：" + info.SSID + "\n\r WiFi地址：" + info.BSSID + "\n\r WiFi安全：" + info.secure + "\n\r WiFi信号：" + info.signalStrength
+    }
+    wx.setClipboardData({
+      data: "  手机品牌：" + info.brand + "\n\r 手机型号：" + info.model + "\n\r 客户端平台：" + info.platform + "\n\r 操作系统版本：" + info.system + "\n\r 微信版本号：" + info.version + "\n\r 基础库版本：" + info.SDKVersion  + "\n\r 设备像素比：" + info.pixelRatio + "\n\r 状态栏的高度：" + info.statusBarHeight + "\n\r 屏幕宽度：" + info.screenWidth + "\n\r 屏幕高度：" + info.screenHeight + "\n\r 可使用窗口宽度：" + info.windowWidth + "\n\r 可使用窗口高度：" + info.windowHeight + "\n\r 用户字体大小：" + info.fontSizeSetting + "\n\r 当前网络状态：" + info.networkType + wifiInfo + "\n\r 是否支持NFC：" + info.nfc,
+      success: function (res) {
       }
     })
   },
