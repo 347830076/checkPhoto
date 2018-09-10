@@ -85,5 +85,6 @@
 </view>
 <view class='btn'>
   <button bindtap="setClip">复制设备信息</button>
+  <button style='margin-top:20rpx;' open-type="share">赶紧分享给小伙伴，看大家的手机真伪</button>
 </view>
 <service></service>

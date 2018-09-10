@@ -126,6 +126,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '检测手机状况小程序', // 分享标题
+      path: 'pages/index/index',
+      imageUrl: '../../image/share.jpg'
+    }
   }
 })

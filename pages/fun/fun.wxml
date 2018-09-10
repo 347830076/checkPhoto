@@ -16,6 +16,10 @@
     <text class='row_l'>用户问题反馈回答</text>
     <text class='arrows'></text>
   </view>
+  <view class='row'hover-class="hoverbg">
+    <text class='row_l'>商务合作（加微信：small_check）</text>
+    <!-- <text class='arrows'></text> -->
+  </view>
   <!-- <view class='row' bindtap="give" hover-class="hoverbg">
     <navigator class='navigator' target="miniProgram" open-type="navigate" app-id="" path="" extra-data="" version="release">打开绑定的小程序</navigator>
     <text class='row_l'>打赏支持开发者</text>
