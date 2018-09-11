@@ -1,7 +1,4 @@
-//index.js
-//获取应用实例
 const app = getApp()
-
 Page({
   data: {
     nfc: '',
@@ -101,7 +98,40 @@ Page({
           nfc: '不支持'
         });
       }
-    })
+    });
+
+    //检查小程序最新版本并下载
+    if (wx.getUpdateManager) {
+      const updateManager = wx.getUpdateManager()
+      updateManager.onCheckForUpdate(function (res) {
+        // 请求完新版本信息的回调
+        // console.log(res.hasUpdate)
+      });
+      updateManager.onUpdateReady(function () {
+        wx.showModal({
+          title: '更新提示',
+          content: '更新到最新版小程序，获得更好体验。',
+          success: function (res) {
+            if (res.confirm) {
+              // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+              updateManager.applyUpdate()
+            }
+          }
+        })
+      });
+      updateManager.onUpdateFailed(function () {
+        // 新的版本下载失败
+      })
+    } else {
+      wx.showModal({
+        title: '提示',
+        content: '您的微信版本过低，可以下载最新微信版本，获取更多的小程序功能',
+        showCancel: false,
+        confirmText: "知道了",
+        success: function (res) {
+        }
+      })
+    }
   },
   //复制设备信息
   setClip: function () {
@@ -116,9 +146,6 @@ Page({
       }
     })
   },
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
     return {
       title: '检测手机真伪小程序', // 分享标题
