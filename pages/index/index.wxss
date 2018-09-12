@@ -27,7 +27,7 @@ page{
 }
 .rowCon_l{
   display: inline-block;
-  width: 280rpx;
+  /* width: 280rpx; */
   margin-right: 10rpx;
 }
 .rowCon>text:last-child{

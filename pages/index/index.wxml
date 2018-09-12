@@ -82,6 +82,11 @@
     <text class='rowCon_l'>是否支持NFC：</text>
     <text>{{nfc}}</text>
   </view>
+  <view class='rowCon' hidden='{{!benchmarkLevel}}'>
+    <text class='rowCon_l'>性能等级：</text>
+    <text>{{benchmarkLevel}}</text>
+  </view>
+  <view style='font-size:20rpx;color:#999;'>(仅Android) -2 或 0：该设备无法运行小游戏，-1：性能未知，>=1 设备性能值，该值越高，设备性能越好 (目前设备最高不到50)</view>
 </view>
 <view class='btn'>
   <button bindtap="setClip">复制设备信息</button>

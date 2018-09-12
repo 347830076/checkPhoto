@@ -33,6 +33,7 @@ Page({
           system: res.system,
           fontSizeSetting: res.fontSizeSetting + "px",
           SDKVersion: res.SDKVersion,
+          benchmarkLevel: res.benchmarkLevel,
           statusBarHeight: res.statusBarHeight + "px"
         })
       }
@@ -136,12 +137,15 @@ Page({
   //复制设备信息
   setClip: function () {
     let info = this.data;
-    let wifiInfo = '';
+    let wifiInfo = '', benchmarkLevel = '';
     if (info.SSID) {
-      wifiInfo = "\n\r WiFi名字：" + info.SSID + "\n\r WiFi地址：" + info.BSSID + "\n\r WiFi安全：" + info.secure + "\n\r WiFi信号：" + info.signalStrength
+      wifiInfo = "\n\r WiFi名字：" + info.SSID + "\n\r WiFi地址：" + info.BSSID + "\n\r WiFi安全：" + info.secure + "\n\r WiFi信号：" + info.signalStrength;
+    }
+    if (info.benchmarkLevel){
+      benchmarkLevel = "\n\r 性能等级：" + info.benchmarkLevel;
     }
     wx.setClipboardData({
-      data: "  手机品牌：" + info.brand + "\n\r 手机型号：" + info.model + "\n\r 客户端平台：" + info.platform + "\n\r 操作系统版本：" + info.system + "\n\r 微信版本号：" + info.version + "\n\r 基础库版本：" + info.SDKVersion  + "\n\r 设备像素比：" + info.pixelRatio + "\n\r 状态栏的高度：" + info.statusBarHeight + "\n\r 屏幕宽度：" + info.screenWidth + "\n\r 屏幕高度：" + info.screenHeight + "\n\r 可使用窗口宽度：" + info.windowWidth + "\n\r 可使用窗口高度：" + info.windowHeight + "\n\r 用户字体大小：" + info.fontSizeSetting + "\n\r 当前网络状态：" + info.networkType + wifiInfo + "\n\r 是否支持NFC：" + info.nfc,
+      data: "  手机品牌：" + info.brand + "\n\r 手机型号：" + info.model + "\n\r 客户端平台：" + info.platform + "\n\r 操作系统版本：" + info.system + "\n\r 微信版本号：" + info.version + "\n\r 基础库版本：" + info.SDKVersion + "\n\r 设备像素比：" + info.pixelRatio + "\n\r 状态栏的高度：" + info.statusBarHeight + "\n\r 屏幕宽度：" + info.screenWidth + "\n\r 屏幕高度：" + info.screenHeight + "\n\r 可使用窗口宽度：" + info.windowWidth + "\n\r 可使用窗口高度：" + info.windowHeight + "\n\r 用户字体大小：" + info.fontSizeSetting + "\n\r 当前网络状态：" + info.networkType + wifiInfo + "\n\r 是否支持NFC：" + info.nfc + benchmarkLevel,
       success: function (res) {
       }
     })
