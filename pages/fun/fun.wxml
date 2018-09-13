@@ -7,6 +7,10 @@
     <text class='row_l'>生成二维码</text>
     <text class='arrows'></text>
   </view>
+  <view class='row' bindtap="toView" data-url="short" hover-class="hoverbg">
+    <text class='row_l'>长网址生成短连接网址</text>
+    <text class='arrows'></text>
+  </view>
   <view class='row' bindtap="toView" data-url="cookbook" hover-class="hoverbg">
     <text class='row_l'>菜谱大全</text>
     <text class='arrows'></text>
@@ -17,7 +21,7 @@
     <text class='arrows'></text>
   </view>
   <view class='row'hover-class="hoverbg">
-    <text class='row_l'>商务合作（加微信：small_check）</text>
+    <text class='row_l'>联系合作（加微信：small_check）</text>
     <!-- <text class='arrows'></text> -->
   </view>
   <!-- <view class='row' bindtap="give" hover-class="hoverbg">

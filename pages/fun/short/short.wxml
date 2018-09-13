@@ -1,0 +1,12 @@
+<view class='main'>
+  <!-- <view class='main_row clearfix'>
+    <view class='main_row_l'>输入网址：</view>
+    <view class='main_row_r'>{{result}}<text data-result="{{result}}" bindtap='copy'>复制</text></view>
+  </view> -->
+  <input class='inputCon' placeholder='请输入网址' bindinput="bindKeyInput"></input>
+  <view class='main_row clearfix' hidden='{{!result}}'>
+    <view class='main_row_l'>您生成的短连接：</view>
+    <view class='main_row_r'>{{result}}<text data-result="{{result}}" bindtap='copy'>复制</text></view>
+  </view>
+  <button style='margin-top:20rpx;' bindtap="shortFun">缩短</button>
+</view>

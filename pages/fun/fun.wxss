@@ -42,5 +42,5 @@
   border-color: #999 #999 transparent transparent;
 }
 .btn{
-  padding: 30rpx;
+  padding: 0 30rpx 30rpx;
 }

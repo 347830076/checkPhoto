@@ -1,0 +1,42 @@
+.main {
+  margin-top: 30rpx;
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.main_row {
+  position: relative;
+  padding: 20rpx 0 20rpx 220rpx;
+}
+
+.main_row_l {
+  float: left;
+  width: 220rpx;
+  margin-left: -220rpx;
+  line-height: 60rpx;  
+}
+
+.main_row_r {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.main_row_r text{
+  display: inline-block;
+  line-height: 60rpx;
+  width: 100rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  color: #fff;
+  background-color: #3CC51F;
+  margin-left: 20rpx;
+}
+
+
+.inputCon{
+  border: 1rpx solid #e4e4e4;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;  
+}

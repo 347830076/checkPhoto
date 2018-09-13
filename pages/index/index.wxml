@@ -1,7 +1,3 @@
-<view class='btn'>
-  <button bindtap="bindViewTap">开始检测手机功能</button>
-</view>
-<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>
 <view class="container">
   <view class='tip'>系统检测到你的设备信息</view>
   <view class='rowCon'>
@@ -89,7 +85,9 @@
   <view style='font-size:20rpx;color:#999;'>(仅Android) -2 或 0：该设备无法运行小游戏，-1：性能未知，>=1 设备性能值，该值越高，设备性能越好 (目前设备最高不到50)</view>
 </view>
 <view class='btn'>
-  <button bindtap="setClip">复制设备信息</button>
+  <button bindtap="bindViewTap">开始检测手机功能</button>
+  <button style='margin-top:20rpx;' bindtap="setClip">复制设备信息</button>
   <button style='margin-top:20rpx;' open-type="share">赶紧分享给小伙伴，看大家的手机真伪</button>
 </view>
 <service></service>
+<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>
