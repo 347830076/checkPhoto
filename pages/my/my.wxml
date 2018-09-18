@@ -1,0 +1,33 @@
+<view class="top">
+  <view class="imgCon">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="name">
+    <open-data type="userNickName"></open-data>
+  </view>
+</view>
+<view class="rowCon">
+  <view class="row border_b" catchtap="openwin" data-url="model_list">
+    <!-- <view class="row_l yhq">
+      <image src="../../images/my_order.png"></image>
+    </view> -->
+    <view class="row_text">好友机型</view>
+    <view class="arrows"></view>
+  </view>
+
+  <view class="row" catchtap="setClip">
+    <!-- <view class="row_l lxkf">
+      <image src="../../images/kefu.png"></image>
+    </view> -->
+    <view class="row_text">
+      联系微信
+      <text>small_check</text>
+    </view>
+    <view class="arrows"></view>
+  </view>
+</view>
+
+<view class='btn'>
+  <button hidden='{{openid}}' class='myButton' open-type="getUserInfo" data-type="check" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+  <button style='margin-top:20rpx;' open-type="share">分享给小伙伴，看大家的手机型号</button>
+</view>

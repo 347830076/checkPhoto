@@ -1,4 +1,6 @@
-const app = getApp()
+const app = getApp();
+let openid = null;
+let p_openid = null;
 Page({
   data: {
     nfc: '',
@@ -15,7 +17,20 @@ Page({
       url: '../detection/detection'
     })
   },
-  onLoad: function () {
+  onLoad: function (options) {
+    console.log(options)
+    if (options && options.p_openid) {
+      p_openid = options.p_openid;
+    }
+
+    wx.getStorage({
+      key: 'openid',
+      success: function (res) {
+        console.log('openid:', res)
+        openid = res.data;
+      }
+    })
+
     var that = this;
     wx.getSystemInfo({
       success: function (res) {
@@ -134,6 +149,69 @@ Page({
       })
     }
   },
+  //登录用户授权
+  bindGetUserInfo: function (e) {
+    console.log('bindGetUserInfo', e);
+    let that = this;
+    if (e.detail.userInfo) {
+      new Promise((resolve, reject) => {
+        wx.login({
+          success: function (res) {
+            if (res.code) {
+              resolve({
+                encryptedData: e.detail.encryptedData,
+                iv: e.detail.iv,
+                code: res.code,
+                userInfo: e.detail.userInfo,
+                type: e.currentTarget.dataset.type
+              })
+            } else {
+              console.log('获取用户登录态失败！' + res.errMsg)
+              reject();
+            }
+          }
+        });
+      }).then((resolve) => {
+        console.log('resolve' + JSON.stringify(resolve));
+        that.login(resolve);
+      })
+    }
+  },
+  //请求服务器 登录
+  login: function (obj) {
+    let that = this;
+    if (obj.type === 'check') {
+      that.bindViewTap();
+    } else if (obj.type === 'copy') {
+      that.setClip();
+    }
+
+    if (openid) {
+      return false;
+    }
+
+    wx.request({
+      url: app.globalData.serverUrl + 'Home/Small/login',
+      data: {
+        code: obj.code,
+        data: this.data,
+        userInfo: obj.userInfo,
+        p_openid: p_openid
+      },
+      method: 'GET',
+      success: function (res) {
+        console.log('登录', res);
+        if (res.data.code === '1') {
+          openid = res.data.data.openid;
+          //保存openid在本地缓存
+          wx.setStorage({
+            key: 'openid',
+            data: openid
+          })
+        }
+      }
+    });
+  },
   //复制设备信息
   setClip: function () {
     let info = this.data;
@@ -141,7 +219,7 @@ Page({
     if (info.SSID) {
       wifiInfo = "\n\r WiFi名字：" + info.SSID + "\n\r WiFi地址：" + info.BSSID + "\n\r WiFi安全：" + info.secure + "\n\r WiFi信号：" + info.signalStrength;
     }
-    if (info.benchmarkLevel){
+    if (info.benchmarkLevel) {
       benchmarkLevel = "\n\r 性能等级：" + info.benchmarkLevel;
     }
     wx.setClipboardData({
@@ -153,7 +231,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '检测手机真伪小程序', // 分享标题
-      path: 'pages/index/index',
+      path: 'pages/index/index?openid=' + openid,
       imageUrl: '../../image/share1.jpg'
     }
   }

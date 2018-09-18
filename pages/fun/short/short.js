@@ -25,7 +25,7 @@ Page({
     console.log(e)
     let val = this.data.val;
     wx.request({
-      url: 'http://api.kks.me/api.php?url='+ val,
+      url: 'https://test.showhtml5.cc/Home/Small/getShort?val='+ val,
       data: {},
       success: function (res) {
         console.log(res)
@@ -104,6 +104,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '生成短链接小程序', // 分享标题
+      path: 'pages/fun/short/short',
+      imageUrl: '../../../image/share2.jpg'
+    }
   }
 })

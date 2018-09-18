@@ -1,5 +1,4 @@
 <view class="container">
-  <view class='tip'>系统检测到你的设备信息</view>
   <view class='rowCon'>
     <text class='rowCon_l'>手机品牌：</text>
     <text>{{brand}}</text>
@@ -22,78 +21,49 @@
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>基础库版本：</text>
-    <text>{{SDKVersion}}</text>
+    <text>{{sdkversion}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>设备像素比：</text>
-    <text>{{pixelRatio}}</text>
+    <text>{{pixelratio}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>状态栏的高度：</text>
-    <text>{{statusBarHeight}}</text>
+    <text>{{statusbarheight}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>屏幕宽度：</text>
-    <text>{{screenWidth}}</text>
+    <text>{{screenwidth}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>屏幕高度：</text>
-    <text>{{screenHeight}}</text>
+    <text>{{screenheight}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>可使用窗口宽度：</text>
-    <text>{{windowWidth}}</text>
+    <text>{{windowwidth}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>可使用窗口高度：</text>
-    <text>{{windowHeight}}</text>
+    <text>{{windowheight}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>用户字体大小：</text>
-    <text>{{fontSizeSetting}}</text>
+    <text>{{fontsizesetting}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>当前网络状态：</text>
-    <text>{{networkType}}</text>
-  </view>
-  <view hidden='{{!SSID}}'>
-    <view class='rowCon'>
-      <text class='rowCon_l'>WiFi名字：</text>
-      <text>{{SSID}}</text>
-    </view>
-    <view class='rowCon'>
-      <text class='rowCon_l'>WiFi地址：</text>
-      <text>{{BSSID}}</text>
-    </view>
-    <view class='rowCon'>
-      <text class='rowCon_l'>WiFi安全：</text>
-      <text>{{secure}}</text>
-    </view>
-    <view class='rowCon'>
-      <text class='rowCon_l'>WiFi信号：</text>
-      <text>{{signalStrength}}</text>
-    </view>
+    <text>{{networktype}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>是否支持NFC：</text>
     <text>{{nfc}}</text>
   </view>
-  <view hidden='{{!benchmarkLevel}}'>
+  <view hidden='{{!benchmarklevel}}'>
     <view class='rowCon'>
       <text class='rowCon_l'>性能等级：</text>
-      <text>{{benchmarkLevel}}</text>
+      <text>{{benchmarklevel}}</text>
     </view>
     <view style='font-size:20rpx;color:#999;'>(仅Android) -2 或 0：该设备无法运行小游戏，-1：性能未知，>=1 设备性能值，该值越高，设备性能越好 (目前设备最高不到50)</view>
   </view>
 </view>
-<view class='btn'>
-  <button>开始检测手机功能
-    <button class='myButton' open-type="getUserInfo" data-type="check" bindgetuserinfo="bindGetUserInfo">授权登录</button>
-  </button>
-  <button style='margin-top:20rpx;'>复制设备信息
-    <button class='myButton' open-type="getUserInfo" data-type="copy" bindgetuserinfo="bindGetUserInfo">授权登录</button>
-  </button>
-  <button style='margin-top:20rpx;' open-type="share">赶紧分享给小伙伴，看大家的手机真伪</button>
-</view>
-<!-- <service></service> -->
-<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>

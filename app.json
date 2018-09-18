@@ -21,6 +21,9 @@
     "pages/fun/cookbook/cookbook",
     "pages/fun/cookbook_detail/cookbook_detail",
     "pages/fun/answer/answer",
+    "pages/my/my",
+    "pages/my/model_list/model_list",
+    "pages/my/model_detail/model_detail",
     "pages/logs/logs"
   ],
   "window":{
@@ -44,6 +47,12 @@
         "iconPath": "image/fun.png",
         "selectedIconPath": "image/fun_h.png",
         "text": "小功能"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/my_h.png",
+        "text": "我的"
       }
     ]
   },

@@ -19,6 +19,7 @@ text{
 }
 
 button{
+  position: relative;
   font-size: 36rpx;
   height: 90rpx;
   line-height: 90rpx;

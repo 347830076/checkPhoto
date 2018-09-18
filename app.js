@@ -7,6 +7,8 @@ App({
     wx.setStorageSync('logs', logs)
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    serverUrl: 'https://test.showhtml5.cc/',
+    // serverUrl:'http://myphp.localhost.com/',
   }
 })
