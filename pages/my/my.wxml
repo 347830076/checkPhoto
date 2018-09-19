@@ -7,11 +7,20 @@
   </view>
 </view>
 <view class="rowCon">
-  <view class="row border_b" catchtap="openwin" data-url="model_list">
+  <view class="row border_b">
     <!-- <view class="row_l yhq">
       <image src="../../images/my_order.png"></image>
     </view> -->
     <view class="row_text">好友机型</view>
+    <view class="arrows"></view>
+    <button class='myButton' open-type="getUserInfo" data-type="model_list" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+  </view>
+
+  <view class="row border_b" catchtap="openwin" data-url="answer">
+    <!-- <view class="row_l yhq">
+      <image src="../../images/my_order.png"></image>
+    </view> -->
+    <view class="row_text">用户反馈问答</view>
     <view class="arrows"></view>
   </view>
 
@@ -20,8 +29,8 @@
       <image src="../../images/kefu.png"></image>
     </view> -->
     <view class="row_text">
-      联系微信
-      <text>small_check</text>
+      合作联系
+      <text>微信：small_check</text>
     </view>
     <view class="arrows"></view>
   </view>

@@ -1,5 +1,5 @@
 <view class='top'>
-  欢迎大家反馈问题，大家可以点击右下角悬浮客服按钮，留言反馈给我。我会抽空一一查看，好的问题会写上列表给大家看。大家有什么需要的功能也可以说下,我会尽自己能力去实现，感谢大家的支持。
+  欢迎大家反馈问题，大家可以点击下面“意见反馈”按钮，留言反馈给我。我会抽空一一查看，好的问题会写上列表给大家看。大家有什么需要的功能也可以说下,我会尽自己能力去实现，感谢大家的支持。( 下面放广告是希望有点收入来开支服务器的开销，大家懂得(^_−)☆ )
 </view>
  <view class="fqaCon">
   <view class="fqa_row" wx:for="{{data}}" wx:key="{{index}}">
@@ -10,5 +10,9 @@
     <view hidden="{{item.flag ? true : false}}" class="fqa_content border_b">{{item.content}}</view>
   </view>
 </view> 
-<service></service>
+<view class='btn'>
+  <button open-type="feedback">意见反馈</button>
+</view>
+<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>
+<!-- <service></service> -->
 

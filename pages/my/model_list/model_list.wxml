@@ -8,3 +8,4 @@
     <view class="arrows"></view>
   </view>
 </view>
+<view class='footer_tip'>温馨提示：分享给好友后，好友点击首页->"开始检测手机功能" 或 "复制设备信息" ,授权登录了，才可以获取好友的手机设备信息（微信官方必须要用户主动授权）</view>

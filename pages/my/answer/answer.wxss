@@ -46,3 +46,6 @@
   -webkit-transform: rotate(-45deg) translateY(-50%);
   transform: rotate(-45deg) translateY(-50%);
 }
+.btn{
+  padding: 30rpx;
+}

@@ -18,9 +18,11 @@ Page({
     })
   },
   onLoad: function (options) {
+    let that = this;
+    
     console.log(options)
-    if (options && options.p_openid) {
-      p_openid = options.p_openid;
+    if (options && options.openid) {
+      p_openid = options.openid;
     }
 
     wx.getStorage({
@@ -28,10 +30,12 @@ Page({
       success: function (res) {
         console.log('openid:', res)
         openid = res.data;
+        that.setData({
+          openid: openid
+        })
       }
     })
 
-    var that = this;
     wx.getSystemInfo({
       success: function (res) {
         console.log(res);
@@ -186,10 +190,6 @@ Page({
       that.setClip();
     }
 
-    if (openid) {
-      return false;
-    }
-
     wx.request({
       url: app.globalData.serverUrl + 'Home/Small/login',
       data: {
@@ -207,6 +207,9 @@ Page({
           wx.setStorage({
             key: 'openid',
             data: openid
+          });
+          that.setData({
+            openid: openid
           })
         }
       }

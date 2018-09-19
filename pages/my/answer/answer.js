@@ -5,7 +5,7 @@ Page({
     data: [{
       title: '还能用几年？',
       flag: false,
-      content: '这个小程序会一直免费提供功能给大家使用。只要微信不倒，不封号就可以用。'
+      content: '只要微信不倒，不封号，这个小程序会一直免费提供功能给大家使用。'
     }]
   },
   onLoad: function (options) {

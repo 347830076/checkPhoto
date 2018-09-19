@@ -37,6 +37,9 @@ Page({
       key: 'openid',
       success: function (res) {
         console.log('openid:', res)
+        wx.showLoading({
+          title:'请求服务器中...'
+        })
         wx.request({
           url: app.globalData.serverUrl + 'Home/Small/getFriendModel',
           data: {
@@ -50,6 +53,8 @@ Page({
                 info: res.data.data
               })
             }
+          },complete(){
+            wx.hideLoading();
           }
         });
       }

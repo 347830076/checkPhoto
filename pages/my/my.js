@@ -103,11 +103,12 @@ Page({
   //请求服务器 登录
   login: function (obj) {
     let that = this;
-    
-    if (that.data.openid) {
-      return false;
+    if (obj.type === 'model_list'){
+      wx.navigateTo({
+        url: './model_list/model_list'
+      })
     }
-
+    
     wx.request({
       url: app.globalData.serverUrl + 'Home/Small/login',
       data: {
@@ -179,6 +180,7 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    console.log('分享', this.data.openid)
     return {
       title: '检测手机真伪小程序', // 分享标题
       path: 'pages/index/index?openid=' + this.data.openid,

@@ -44,3 +44,7 @@
   -webkit-transform: rotate(45deg) translateY(-50%);
   transform: rotate(45deg) translateY(-50%);
 }
+.footer_tip{
+  padding: 30rpx;
+  color: #999;
+}
