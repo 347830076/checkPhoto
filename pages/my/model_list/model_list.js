@@ -1,16 +1,13 @@
 let app = getApp();
+let openid = null;
+let page = 0; //页数
+let pageSize = 10; //条数
+let count = null; //总条数
+let pages = null; //总页数
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    info: null
+    info: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
 
   },
@@ -21,65 +18,71 @@ Page({
       url: '../' + path + '/' + path + '?openid=' + openid
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
     let that = this;
     wx.getStorage({
       key: 'openid',
       success: function (res) {
         console.log('openid:', res)
-        wx.showLoading({
-          title:'请求服务器中...'
-        })
-        wx.request({
-          url: app.globalData.serverUrl + 'Home/Small/getFriendModel',
-          data: {
-            openid: res.data
-          },
-          method: 'GET',
-          success: function (res) {
-            console.log('获取好友机型列表', res);
-            if (res.data.code === '1') {
-              that.setData({
-                info: res.data.data
-              })
-            }
-          },complete(){
-            wx.hideLoading();
-          }
-        });
+        openid = res.data;
+        that.ajax();
       }
     });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  ajax:function(){
+    let that = this;
+    wx.showLoading({
+      title: '请求服务器中...',
+      mask:true
+    })
+    wx.request({
+      url: app.globalData.serverUrl + 'Home/Small/getFriendModel',
+      data: {
+        openid: openid,
+        page: page,
+        pageSize: pageSize
+      },
+      method: 'GET',
+      success: function (res) {
+        console.log('获取好友机型列表', res);
+        if (res.data.code === '1') {
+          that.setData({
+            info: that.data.info.concat(res.data.data)
+          });
+          if (!count){
+            count = res.data.count;
+            pages = Math.ceil(count / pageSize);
+            wx.setNavigationBarTitle({ title: '好友机型（' + count + '）' })
+          }
+        }
+      }, complete() {
+        wx.hideLoading();
+      }
+    });
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
+  onUnload: function () {
+     page = 0; //页数
+     pageSize = 10; //条数
+     count = null; //总条数
+     pages = null; //总页数
+  },
   onPullDownRefresh: function () {
 
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
-
+    page++;
+    console.log(page,pages);
+    if(page < pages){
+      this.ajax();
+    }else{
+      wx.showToast({
+        title:'没有更多了',
+        icon:'none'
+      })
+    }
   },
 
 })

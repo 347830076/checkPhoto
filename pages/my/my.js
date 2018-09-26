@@ -121,6 +121,9 @@ Page({
         console.log('登录', res);
         if (res.data.code === '1') {
           //保存openid在本地缓存
+          that.setData({
+            openid: res.data.data.openid
+          })
           wx.setStorage({
             key: 'openid',
             data: res.data.data.openid
@@ -183,7 +186,7 @@ Page({
     console.log('分享', this.data.openid)
     return {
       title: '检测手机真伪小程序', // 分享标题
-      path: 'pages/index/index?openid=' + this.data.openid,
+      path: 'pages/index/index?p_openid=' + this.data.openid,
       imageUrl: '../../image/share1.jpg'
     }
   }

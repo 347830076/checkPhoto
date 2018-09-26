@@ -24,6 +24,7 @@
     "pages/my/model_list/model_list",
     "pages/my/model_detail/model_detail",
     "pages/my/answer/answer",
+    "pages/my/support/support",
     "pages/logs/logs"
   ],
   "window":{

@@ -1,4 +1,4 @@
-// pages/report/report.js
+let openid = null;
 Page({
 
   /**
@@ -31,6 +31,13 @@ Page({
         that.setData({
           info: res.data
         })
+      }
+    });
+    wx.getStorage({
+      key: 'openid',
+      success: function (res) {
+        console.log('openid:', res)
+        openid = res.data;
       }
     })
   },
@@ -83,7 +90,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '检测手机状况小程序', // 分享标题
-      path: 'pages/index/index',
+      path: 'pages/index/index?p_openid=' + openid,
       imageUrl: '../../image/share.jpg'
     }
   }

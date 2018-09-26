@@ -1,0 +1,12 @@
+.title{
+  font-size: 36rpx;
+  padding: 30rpx 0 0;
+  color: #1E9FFF;
+  text-align: center;
+}
+.imgCon{
+  padding: 30rpx;
+}
+.imgCon image{
+  width: 100%;
+}

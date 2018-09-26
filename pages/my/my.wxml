@@ -24,13 +24,17 @@
     <view class="arrows"></view>
   </view>
 
-  <view class="row" catchtap="setClip">
-    <!-- <view class="row_l lxkf">
-      <image src="../../images/kefu.png"></image>
-    </view> -->
+  <view class="row border_b" catchtap="setClip">
     <view class="row_text">
       合作联系
       <text>微信：small_check</text>
+    </view>
+    <view class="arrows"></view>
+  </view>
+  <view class="row" catchtap="openwin" data-url="support">
+    <view class="row_text">
+      支持开发者
+      <text></text>
     </view>
     <view class="arrows"></view>
   </view>
@@ -38,5 +42,5 @@
 
 <view class='btn'>
   <button hidden='{{openid}}' class='myButton' open-type="getUserInfo" data-type="check" bindgetuserinfo="bindGetUserInfo">授权登录</button>
-  <button style='margin-top:20rpx;' open-type="share">分享给小伙伴，看大家的手机型号</button>
+  <button style='margin-top:20rpx;' open-type="share">分享给朋友，看大家的手机设备信息</button>
 </view>

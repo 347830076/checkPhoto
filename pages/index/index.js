@@ -21,8 +21,8 @@ Page({
     let that = this;
     
     console.log(options)
-    if (options && options.openid) {
-      p_openid = options.openid;
+    if (options && options.p_openid) {
+      p_openid = options.p_openid;
     }
 
     wx.getStorage({
@@ -89,7 +89,7 @@ Page({
                 SSID: res.wifi.SSID,
                 BSSID: res.wifi.BSSID,
                 secure: res.wifi.secure ? "安全" : "危险",
-                signalStrength: res.wifi.signalStrength > 80 ? "强" : (signalStrength > 50 ? "中" : "弱"),
+                signalStrength: res.wifi.signalStrength ? res.wifi.signalStrength > 80 ? "强" : (signalStrength > 50 ? "中" : "弱") : "",
               });
             }
           }, fail(res) {
@@ -234,7 +234,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '检测手机真伪小程序', // 分享标题
-      path: 'pages/index/index?openid=' + openid,
+      path: 'pages/index/index?p_openid=' + openid,
       imageUrl: '../../image/share1.jpg'
     }
   }

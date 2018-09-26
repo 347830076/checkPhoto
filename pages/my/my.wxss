@@ -76,6 +76,7 @@
   transform: rotate(45deg) translateY(-50%);
 }
 .btn{
+  position: relative;
   padding: 30rpx;
 
 }
