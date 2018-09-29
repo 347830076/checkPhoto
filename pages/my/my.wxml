@@ -44,3 +44,4 @@
   <button hidden='{{openid}}' class='myButton' open-type="getUserInfo" data-type="check" bindgetuserinfo="bindGetUserInfo">授权登录</button>
   <button style='margin-top:20rpx;' open-type="share">分享给朋友，看大家的手机设备信息</button>
 </view>
+<service></service>

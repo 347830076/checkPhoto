@@ -1,5 +1,8 @@
 {
   "navigationBarTitleText": "个人中心",
   "backgroundColor": "#308BFF",
-  "navigationBarBackgroundColor":"#308BFF"
+  "navigationBarBackgroundColor":"#308BFF",
+  "usingComponents": {
+    "service": "../../template/service/service"
+  }
 }

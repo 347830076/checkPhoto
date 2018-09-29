@@ -98,5 +98,5 @@
     <button class='myButton' hidden='{{openid}}' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
   </view>
 </view>
-<!-- <service></service> -->
+<service></service>
 <ad unit-id="adunit-7e08c687a5aa2ba8"></ad>

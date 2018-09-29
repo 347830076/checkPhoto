@@ -1,4 +1,4 @@
 <view class='title'>点击查看大图，才可以长按识别二维码</view>
 <view class='imgCon'>
-  <image mode='widthFix' src='../../../image/support.jpg' data-path="../../../image/support.jpg" catchtap='openBig'></image>
+  <image mode='widthFix' src='https://test.showhtml5.cc/Public/img/support.jpg' catchtap='openBig'></image>
 </view>
