@@ -98,5 +98,15 @@
     <button class='myButton' hidden='{{openid}}' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
   </view>
 </view>
+<view class='shareBG' hidden='{{shareFlag}}' catchtap='func'>
+  <view class='shareCon'>
+    <view class='shareText'>分享一次即可使用</view>
+    <view>
+      <button>分享
+        <button catchtap='shareBtn' class='myButton' open-type="share">赶紧分享给小伙伴，看大家的手机真伪</button>
+      </button>
+    </view>
+  </view>
+</view>
 <service></service>
 <ad unit-id="adunit-7e08c687a5aa2ba8"></ad>

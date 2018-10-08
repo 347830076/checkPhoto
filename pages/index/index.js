@@ -4,6 +4,8 @@ let p_openid = null;
 Page({
   data: {
     nfc: '',
+    shareFlag:true,
+    shareF:true
   },
   //事件处理函数
   bindViewTap: function () {
@@ -13,8 +15,22 @@ Page({
         console.log(res.data)
       }
     });
-    wx.navigateTo({
-      url: '../detection/detection'
+
+    if (this.data.shareF){
+      this.setData({
+        shareFlag: false
+      })
+    }else{
+      wx.navigateTo({
+        url: '../detection/detection'
+      })
+    }
+  },
+  shareBtn:function(){
+    console.log('ddd')
+    this.setData({
+      shareFlag: true,
+      shareF:false
     })
   },
   onLoad: function (options) {

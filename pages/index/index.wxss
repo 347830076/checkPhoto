@@ -42,3 +42,28 @@ page{
   height: 100%;
   opacity: 0;
 }
+.shareBG{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.shareText{
+  text-align: center;
+  font-size: 40rpx;
+  margin-bottom: 40rpx;
+}
+.shareCon{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  width: 500rpx;
+  padding: 40rpx;
+  background-color: #fff;
+  z-index: 3;
+}
