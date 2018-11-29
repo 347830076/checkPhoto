@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "小功能",
   "usingComponents": {
-    "service": "../../template/service/service"
+    "service": "../../template/service/service",
+    "tipCopy": "../../template/tipCopy/index"
   }
 }

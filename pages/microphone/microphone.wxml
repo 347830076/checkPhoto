@@ -1,0 +1,7 @@
+<view class='container'>
+  <button class='por' bindtouchstart="startRecode" bindtouchend='endRecode'>按住录音
+  <button class='myButton' open-type="openSetting" hidden='{{record}}'>打开授权设置页</button>
+  </button>
+  <button bindtap="play">播放录音</button>
+  <button bindtap="over">检测完毕</button>
+</view>

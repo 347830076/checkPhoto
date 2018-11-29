@@ -31,7 +31,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 10,
 			"list": [
 				{
 					"id": 0,
@@ -90,7 +90,13 @@
 				{
 					"id": -1,
 					"name": "支持开发者",
-					"pathName": "pages/my/support/support"
+					"pathName": "pages/my/support/support",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "1",
+					"pathName": "pages/microphone/microphone"
 				}
 			]
 		}

@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/detection/detection",
     "pages/accelerometer/accelerometer",
@@ -25,13 +25,14 @@
     "pages/my/model_detail/model_detail",
     "pages/my/answer/answer",
     "pages/my/support/support",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/microphone/microphone"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#cdcdcd",
@@ -39,8 +40,8 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath":"image/index.png",
-        "selectedIconPath":"image/index_h.png",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index_h.png",
         "text": "首页"
       },
       {

@@ -16,15 +16,15 @@ Page({
       }
     });
 
-    if (this.data.shareF){
-      this.setData({
-        shareFlag: false
-      })
-    }else{
+    // if (this.data.shareF){
+    //   this.setData({
+    //     shareFlag: false
+    //   })
+    // }else{
       wx.navigateTo({
         url: '../detection/detection'
       })
-    }
+    // }
   },
   shareBtn:function(){
     console.log('ddd')
@@ -231,6 +231,7 @@ Page({
       }
     });
   },
+
   //复制设备信息
   setClip: function () {
     let info = this.data;

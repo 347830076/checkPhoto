@@ -15,13 +15,8 @@
     <text class='row_l'>菜谱大全</text>
     <text class='arrows'></text>
   </view>
-
-  <!-- <view class='row' bindtap="give" hover-class="hoverbg">
-    <navigator class='navigator' target="miniProgram" open-type="navigate" app-id="" path="" extra-data="" version="release">打开绑定的小程序</navigator>
-    <text class='row_l'>打赏支持开发者</text>
-    <text class='arrows'></text>
-  </view> -->
 </view>
+<tipCopy></tipCopy>
 <!-- <view class='btn'>
   <button open-type="feedback">意见反馈</button>
 </view> -->

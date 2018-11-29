@@ -1,14 +1,11 @@
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     info: {
       screen_show: 0,
       screen_touch: 0,
       camera: 0,
       trumpet: 0,
+      microphone: 0,
       call: 0,
       wifi: 0,
       bluetooth: 0,
@@ -18,24 +15,6 @@ Page({
       vibrate:0
     }
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
     var that = this;
     wx.getStorage({
@@ -50,7 +29,8 @@ Page({
   },
   //跳转页面
   toView: function (e) {
-    var name = e.target.dataset.url;
+    console.log(e);
+    let name = e.currentTarget.dataset.url;
     wx.setStorage({
       key: "info",
       data: this.data.info,
@@ -74,12 +54,6 @@ Page({
       }
     })
   },
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
   //手机振动
   vibrate:function(){
     let that = this;
@@ -101,30 +75,6 @@ Page({
       }
     })
   },
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
     return {
       title: '检测手机状况小程序', // 分享标题

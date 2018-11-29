@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "扫描结果"
+  "navigationBarTitleText": "扫描结果",
+  "usingComponents": {
+    "tipCopy": "../../../template/tipCopy/index"
+  }
 }

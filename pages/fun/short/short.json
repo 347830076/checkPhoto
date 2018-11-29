@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "生成短连接"
+  "navigationBarTitleText": "生成短连接",
+  "usingComponents": {
+    "tipCopy": "../../../template/tipCopy/index"
+  }
 }

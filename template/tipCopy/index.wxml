@@ -1,0 +1,4 @@
+<view class='tipCopy' bindtap='setClip2'>打开支付宝首页搜索 “
+  <text style="color:blue;">7216040</text>”立即领红包，天天领哦，
+  <text style="color:blue;">点击文字即可复制搜索码</text>
+</view>

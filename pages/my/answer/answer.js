@@ -3,10 +3,16 @@ Page({
   data: {
     contentFlag1: true,
     data: [{
-      title: '还能用几年？',
+      title: '匿名：还能用几年？',
       flag: false,
       content: '只要微信不倒，不封号，这个小程序会一直免费提供功能给大家使用。'
-    }]
+    },
+    {
+      title: '韦YS：增加麦克风检测功能 最好支持一键全检测',
+      flag: false,
+      content: '已经添加麦克风检测，一键自动检测的话，我会想办法达到，有些还是要人工去判断'
+    }
+   ]
   },
   onLoad: function (options) {
 

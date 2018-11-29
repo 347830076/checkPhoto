@@ -23,6 +23,7 @@
     </view>
     <text class='arrows' data-url="camera"></text>
   </view>
+
   <view class='row' bindtap="toView" data-url="trumpet" hover-class="hoverbg">
     <text class='row_l' data-url="trumpet">喇叭检测</text>
     <view class='row_m' data-url="trumpet">
@@ -31,6 +32,16 @@
     </view>
     <text class='arrows' data-url="trumpet"></text>
   </view>
+
+  <view class='row' bindtap="toView" data-url="microphone" hover-class="hoverbg">
+    <text class='row_l'>麦克风检测</text>
+    <view class='row_m' >
+       <view class='pass' hidden="{{info.microphone != 1}}" >通过</view> 
+       <view class='no_pass' hidden="{{info.microphone != 2}}" >不通过</view>
+    </view>
+    <text class='arrows' ></text>
+  </view>
+
   <view class='row' bindtap="toView" data-url="call" hover-class="hoverbg">
     <text class='row_l' data-url="call">通话功能检测</text>
     <view class='row_m'>

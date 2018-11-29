@@ -1,11 +1,7 @@
-//app.js
+import wxFun from 'utils/wxFun';
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-  },
+  wxFun,
+  onLaunch: function () {},
   globalData: {
     userInfo: null,
     serverUrl: 'https://test.showhtml5.cc/',
