@@ -1,5 +1,5 @@
 .tipCopy {
-  padding:  30rpx 30rpx 0 30rpx;
+  padding:  30rpx;
   font-size: 32rpx;
   line-height: 40rpx;
 }

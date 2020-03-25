@@ -13,7 +13,7 @@ fundebug.init(
 App({
   wxFun,
   onLaunch: function () {
-    fundebug.notify("Test", "Hello, Fundebug!");
+    // fundebug.notify("Test", "Hello, Fundebug!");
   },
   globalData: {
     userInfo: null,

@@ -4,8 +4,8 @@ Page({
   },
   openBig:function(e){
     wx.previewImage({
-      urls: ['https://test.showhtml5.cc/Public/img/support.jpg'],
-      current:'https://test.showhtml5.cc/Public/img/support.jpg',
+      urls: ['http://347830076.github.io/showhtml5.cc/img/zan.jpg'],
+      current:'http://347830076.github.io/showhtml5.cc/img/zan.jpg',
       success:function(res){
         console.log('success:',res);
       },fail(res){
