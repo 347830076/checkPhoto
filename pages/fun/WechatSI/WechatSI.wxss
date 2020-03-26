@@ -39,8 +39,8 @@
 }
 .btnCon > text{
   width: 300rpx;
-  height: 100rpx;
-  line-height: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
   text-align: center;
   border: 1rpx solid #07c160;
   border-radius: 10rpx;
@@ -50,4 +50,38 @@
 }
 .btnCon > text:last-child{
   margin-right: 0;
+}
+.videoCon{
+  padding: 30rpx;
+}
+.videoCon > view{
+  padding: 10rpx 20rpx;
+  display: inline-block;
+  background-color: #ddd;
+  border-radius: 20rpx 20rpx 20rpx 0;
+}
+.videoCon > view .t{
+  color: #999;
+}
+.videoCon.rightCon{
+ text-align: right;
+}
+.videoCon.rightCon > view{
+  color: #fff;
+  background-color: #10aeff;
+  border-radius: 20rpx 20rpx 0 20rpx;
+}
+.videoCon.rightCon > view .t{
+  color: #ccc;
+}
+.footer{
+  position: fixed;
+  width: 100%;
+  height: 140rpx;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background-color: #efeff4;
+  z-index: 1;
 }

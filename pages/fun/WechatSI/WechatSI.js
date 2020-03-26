@@ -7,6 +7,10 @@ Page({
     ],
     content: '',
     speechContent: '',
+    dialogue: [
+      { type: 'leftCon', from: '你好', to: 'hello', file: '' },
+      { type: 'rightCon', from: 'excuse me', to: '对不起', file: '' },
+    ]
   },
   onLoad: function (options) {
     // let manager = plugin.getRecordRecognitionManager()

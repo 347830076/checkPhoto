@@ -16,15 +16,25 @@
   </view>
 </block>
 <block wx:else>
-  <view class="textCon">
-    <view class="title">请输入你需要翻译的文字</view>
-    <textarea placeholder="请输入你需要翻译的文字" value="{{content}}" bindinput='tBindinput'></textarea>
+  <view class="videoCon {{item.type}}" wx:for="{{dialogue}}" wx:key="index">
+   <view>
+     <view class="t">{{item.from}}</view>
+      <view class="b">
+        {{item.to}}
+        <view class="icon"></view>
+      </view>
+   </view>
   </view>
-  <view class="textCon">
-    <view class="title">翻译结果</view>
-    <textarea placeholder="翻译结果" value="{{speechContent}}"></textarea>
-  </view>
-  <view class="btnCon">
+  <!-- <view class="videoCon rightCon">
+    <view>
+      <view class="t">excuse me</view>
+      <view class="b">
+        对不起
+        <view class="icon"></view>
+      </view>
+    </view>
+  </view> -->
+  <view class="btnCon footer">
     <text bindtap="talk" data-talk='cn' class="btn">说中文</text>
     <text bindtap="talk" data-talk='en' class="btn">说英文</text>
   </view>
