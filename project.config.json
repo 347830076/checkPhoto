@@ -89,10 +89,11 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "好友机型",
-					"pathName": "pages/my/model_list/model_list",
-					"query": ""
+					"id": 8,
+					"name": "pages/fun/WechatSI/WechatSI",
+					"pathName": "pages/fun/WechatSI/WechatSI",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": -1,
@@ -124,6 +125,7 @@
 					"id": -1,
 					"name": "pages/fun/cookbook/cookbook",
 					"pathName": "pages/fun/cookbook/cookbook",
+					"query": "",
 					"scene": null
 				}
 			]

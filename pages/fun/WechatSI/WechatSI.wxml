@@ -1,0 +1,15 @@
+<view class="tag">
+  <text wx:for="{{tag}}" wx:key="index" class="{{item.active ? 'active': ''}}" bindtap="tagFun" data-index="{{index}}">{{item.name}}</text>
+</view>
+<view class="textCon">
+  <view class="title">请输入你需要翻译的文字</view>
+  <textarea placeholder="请输入你需要翻译的文字" value="{{content}}" bindinput='tBindinput'></textarea>
+</view>
+<view class="textCon">
+  <view class="title">翻译结果</view>
+  <textarea placeholder="翻译结果" value="{{speechContent}}"></textarea>
+</view>
+<view class="btnCon">
+  <text bindtap="textTotext" data-to='en' class="btn">中文->英文</text>
+  <text bindtap="textTotext" data-to='cn' class="btn">英文->中文</text>
+</view>

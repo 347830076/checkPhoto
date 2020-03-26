@@ -20,6 +20,7 @@
     "pages/fun/short/short",
     "pages/fun/cookbook/cookbook",
     "pages/fun/cookbook_detail/cookbook_detail",
+    "pages/fun/WechatSI/WechatSI",
     "pages/my/my",
     "pages/my/model_list/model_list",
     "pages/my/model_detail/model_detail",
@@ -57,6 +58,12 @@
         "text": "我的"
       }
     ]
+  },
+  "plugins": {
+      "WechatSI": {
+      "version": "0.3.3",
+      "provider": "wx069ba97219f66d99"
+    }
   },
   "debug": false,
   "sitemapLocation": "sitemap.json"

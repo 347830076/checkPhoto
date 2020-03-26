@@ -1,0 +1,53 @@
+.tag{
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+}
+.tag > text{
+  flex: 1;
+  line-height: 60rpx;
+  color: #999;
+  border: 1rpx solid #999;
+  text-align: center;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+}
+.tag > text.active{
+  border: 1rpx solid #10aeff;
+  color: #fff;
+  background-color: #10aeff;
+}
+.textCon{
+  margin: 30rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 30rpx;
+}
+.textCon .title{
+  padding-bottom: 30rpx;
+}
+.textCon textarea{
+  border: 1rpx solid #eee;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+.btnCon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnCon > text{
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border: 1rpx solid #07c160;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+  color: #fff;
+  background-color: #07c160;
+}
+.btnCon > text:last-child{
+  margin-right: 0;
+}
