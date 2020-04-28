@@ -7,14 +7,14 @@
   </view>
 </view>
 <view class="rowCon">
-  <view class="row border_b">
-    <!-- <view class="row_l yhq">
+  <!-- <view class="row border_b">
+    <view class="row_l yhq">
       <image src="../../images/my_order.png"></image>
-    </view> -->
+    </view>
     <view class="row_text">好友机型</view>
     <view class="arrows"></view>
     <button class='myButton' open-type="getUserInfo" data-type="model_list" bindgetuserinfo="bindGetUserInfo">授权登录</button>
-  </view>
+  </view> -->
 
   <view class="row border_b" catchtap="openwin" data-url="answer">
     <!-- <view class="row_l yhq">

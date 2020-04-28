@@ -22,6 +22,6 @@ App({
   },
   // 小程序发生脚本错误，或者 api 调用失败时触发，会带上错误信息
   onError(msg) {
-    fundebug.notify("onError函数", msg);
+    // fundebug.notify("onError函数", msg);
   }
 })

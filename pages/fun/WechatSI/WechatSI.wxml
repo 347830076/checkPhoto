@@ -11,8 +11,8 @@
     <textarea placeholder="翻译结果" value="{{speechContent}}"></textarea>
   </view>
   <view class="btnCon">
-    <text bindtap="textTotext" data-to='en' class="btn">中文->英文</text>
-    <text bindtap="textTotext" data-to='cn' class="btn">英文->中文</text>
+    <text bindtap="textTotext" data-to='en_US' class="btn">中文->英文</text>
+    <text bindtap="textTotext" data-to='zh_CN' class="btn">英文->中文</text>
   </view>
 </block>
 <block wx:else>
@@ -35,8 +35,21 @@
     </view>
   </view> -->
   <view class="btnCon footer">
-    <text bindtap="talk" data-talk='cn' class="btn">说中文</text>
-    <text bindtap="talk" data-talk='en' class="btn">说英文</text>
+    <text bindtap="talk" data-talk='zh_CN' class="btn">说中文</text>
+    <text bindtap="talk" data-talk='en_US' class="btn">说英文</text>
   </view>
 </block>
+
+<view class="recordCon" wx:if="{{talkFlag}}">
+  <view wx:if="{{talkType === 'zh_CN'}}">
+    <view class="title">请说中文</view>
+    <view class="text">正在录音中...</view>
+    <view class="btn" bindtap="stop" data-talk='zh_CN'>结束录音</view>
+  </view>
+  <view wx:else>
+    <view class="title">please speak English</view>
+    <view class="text">Recording...</view>
+    <view class="btn" bindtap="stop" data-talk='en_US'>End of the recording</view>
+  </view>
+</view>
 
