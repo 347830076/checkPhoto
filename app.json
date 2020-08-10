@@ -27,7 +27,8 @@
     "pages/my/answer/answer",
     "pages/my/support/support",
     "pages/logs/logs",
-    "pages/microphone/microphone"
+    "pages/microphone/microphone",
+    "pages/resume/resume"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -60,7 +61,7 @@
     ]
   },
   "plugins": {
-      "WechatSI": {
+    "WechatSI": {
       "version": "0.3.3",
       "provider": "wx069ba97219f66d99"
     }
