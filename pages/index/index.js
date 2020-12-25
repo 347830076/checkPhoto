@@ -4,8 +4,6 @@ let p_openid = null;
 Page({
   data: {
     nfc: '',
-    shareFlag:true,
-    shareF:true
   },
   //事件处理函数
   bindViewTap: function () {
@@ -16,21 +14,8 @@ Page({
       }
     });
 
-    // if (this.data.shareF){
-    //   this.setData({
-    //     shareFlag: false
-    //   })
-    // }else{
-      wx.navigateTo({
-        url: '../detection/detection'
-      })
-    // }
-  },
-  shareBtn:function(){
-    console.log('ddd')
-    this.setData({
-      shareFlag: true,
-      shareF:false
+    wx.navigateTo({
+      url: '../detection/detection'
     })
   },
   onLoad: function (options) {
@@ -52,6 +37,7 @@ Page({
       }
     })
 
+    // 获取系统信息
     wx.getSystemInfo({
       success: function (res) {
         console.log(res);
@@ -93,6 +79,7 @@ Page({
         networkType: networkType !== 'none' ? networkType : "无网络"
       });
     });
+    // 获取wifi信息
     wx.startWifi({
       success: function (res) {
         console.log(res.errMsg);
@@ -248,6 +235,7 @@ Page({
       }
     })
   },
+  // 分享
   onShareAppMessage: function () {
     return {
       title: '检测手机真伪小程序', // 分享标题

@@ -86,7 +86,7 @@
     <view style='font-size:20rpx;color:#999;'>(仅Android) -2 或 0：该设备无法运行小游戏，-1：性能未知，>=1 设备性能值，该值越高，设备性能越好 (目前设备最高不到50)</view>
   </view>
 </view>
-<tipCopy></tipCopy>
+<!-- <tipCopy></tipCopy> -->
 <view class='btn'>
   <button>开始检测手机功能
     <button class='myButton' open-type="getUserInfo" data-type="check" bindgetuserinfo="bindGetUserInfo">授权登录</button>
@@ -99,15 +99,4 @@
     <button class='myButton' hidden='{{openid}}' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
   </view>
 </view>
-<view class='shareBG' hidden='{{shareFlag}}' catchtap='func'>
-  <view class='shareCon'>
-    <view class='shareText'>分享一次即可使用</view>
-    <view>
-      <button>分享
-        <button catchtap='shareBtn' class='myButton' open-type="share">赶紧分享给小伙伴，看大家的手机真伪</button>
-      </button>
-    </view>
-  </view>
-</view>
 <service></service>
-<ad unit-id="adunit-7e08c687a5aa2ba8"></ad>

@@ -31,13 +31,13 @@
     </view>
     <view class="arrows"></view>
   </view>
-  <view class="row" catchtap="openwin" data-url="support">
+  <!-- <view class="row" catchtap="openwin" data-url="support">
     <view class="row_text">
       支持开发者
       <text></text>
     </view>
     <view class="arrows"></view>
-  </view>
+  </view> -->
 </view>
 
 <view class='btn'>
