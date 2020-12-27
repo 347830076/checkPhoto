@@ -21,6 +21,7 @@
     "pages/fun/cookbook/cookbook",
     "pages/fun/cookbook_detail/cookbook_detail",
     "pages/fun/WechatSI/WechatSI",
+    "pages/fun/ocr/ocr",
     "pages/my/my",
     "pages/my/model_list/model_list",
     "pages/my/model_detail/model_detail",
@@ -67,5 +68,8 @@
     }
   },
   "debug": false,
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib":{
+    "weui": true
+  }
 }

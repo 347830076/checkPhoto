@@ -1,32 +1,18 @@
-let app = getApp();
+// pages/fun/ocr/ocr.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    info: {}
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this;
-    console.log('modelDetail:',options);
-    wx.request({
-      url: app.globalData.serverUrl + 'getFriendList',
-      data: {
-        openid: options.openid
-      },
-      method: 'POST',
-      success: function (res) {
-        console.log('获取手机设备信息', res);
-        that.setData({
-          info: res.data[0].data
-        })
-      }
-    });
+
   },
 
   /**

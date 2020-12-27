@@ -1,9 +1,9 @@
 <view class='rowCon'>
-  <view class='row border_b' wx:for="{{info}}" wx:key="{{index}}" catchtap="openwin" data-url="model_detail" data-openid="{{item.openid}}">
-    <view class='row_l'><image src='{{item.avatarurl}}'></image></view>
+  <view class='row border_b' wx:for="{{info}}" wx:key="index" catchtap="openwin" data-url="model_detail" data-openid="{{openid}}">
+    <view class='row_l'><image src='{{item.userInfo.avatarUrl}}'></image></view>
     <view class='row_m'>
-      <view class='name'>{{item.nickname}}</view>
-      <view class='tip'>{{item.brand}} {{item.model}}</view>
+      <view class='name'>{{item.userInfo.nickName}}</view>
+      <view class='tip'>{{item.data.brand}} {{item.data.model}}</view>
     </view>
     <view class="arrows"></view>
   </view>

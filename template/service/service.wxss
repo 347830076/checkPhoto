@@ -9,14 +9,14 @@
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
 }
-.contact image{
+.contact .img{
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
 }
-.contact contact-button{
+.contact .btn{
     position: absolute;
     left: 0;
     top: 0;

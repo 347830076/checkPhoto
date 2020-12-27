@@ -1,7 +1,7 @@
 const app = getApp();
 Page({
   data: {
-    openid : null
+    openid: null
   },
   onLoad: function (options) {
     let that = this;
@@ -10,7 +10,7 @@ Page({
       success: function (res) {
         console.log('openid:', res)
         that.setData({
-          openid:res.data
+          openid: res.data
         })
       }
     });
@@ -64,9 +64,9 @@ Page({
   },
   openwin: function (event) { //跳转页面
     let path = event.currentTarget.dataset.url;
-    if (path == 'setClip'){
+    if (path == 'setClip') {
       this.setClip();
-    }else{
+    } else {
       wx.navigateTo({
         url: './' + path + '/' + path
       })
@@ -76,6 +76,14 @@ Page({
   bindGetUserInfo: function (e) {
     console.log('bindGetUserInfo', e);
     let that = this;
+
+    if(this.data.openid){
+      wx.navigateTo({
+        url: './model_list/model_list'
+      });
+      return;
+    }
+
     if (e.detail.userInfo) {
       new Promise((resolve, reject) => {
         wx.login({
@@ -103,31 +111,33 @@ Page({
   //请求服务器 登录
   login: function (obj) {
     let that = this;
-    if (obj.type === 'model_list'){
-      wx.navigateTo({
-        url: './model_list/model_list'
-      })
-    }
     
     wx.request({
-      url: app.globalData.serverUrl + 'Home/Small/login',
+      url: app.globalData.serverUrl + 'login',
       data: {
         code: obj.code,
         data: this.data,
         userInfo: obj.userInfo
       },
-      method: 'GET',
+      method: 'POST',
       success: function (res) {
         console.log('登录', res);
-        if (res.data.code === '1') {
+        if (res.data.status === 200) {
+          const openid = res.data.data.openid;
+          console.log(openid);
           //保存openid在本地缓存
-          that.setData({
-            openid: res.data.data.openid
-          })
           wx.setStorage({
             key: 'openid',
-            data: res.data.data.openid
+            data: openid
+          });
+          that.setData({
+            openid: openid
           })
+          if (obj.type === 'model_list') {
+            wx.navigateTo({
+              url: './model_list/model_list'
+            })
+          }
         }
       }
     });

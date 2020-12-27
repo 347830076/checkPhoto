@@ -17,7 +17,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    serverUrl: 'https://test.showhtml5.cc/',
+    serverUrl: 'http://api.wanggege.cn/',
     // serverUrl:'http://myphp.localhost.com/',
   },
   // 小程序发生脚本错误，或者 api 调用失败时触发，会带上错误信息

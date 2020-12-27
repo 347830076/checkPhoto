@@ -1,12 +1,12 @@
 let app = getApp();
-let openid = null;
 let page = 0; //页数
 let pageSize = 10; //条数
 let count = null; //总条数
 let pages = null; //总页数
 Page({
   data: {
-    info: []
+    info: [],
+    openid: null
   },
   onLoad: function (options) {
 
@@ -27,7 +27,9 @@ Page({
       key: 'openid',
       success: function (res) {
         console.log('openid:', res)
-        openid = res.data;
+        that.setData({
+          openid: res.data
+        })
         that.ajax();
       }
     });
@@ -39,25 +41,24 @@ Page({
       mask:true
     })
     wx.request({
-      url: app.globalData.serverUrl + 'Home/Small/getFriendModel',
+      url: app.globalData.serverUrl + 'getFriendList',
       data: {
-        openid: openid,
+        openid: that.data.openid,
         page: page,
         pageSize: pageSize
       },
-      method: 'GET',
+      method: 'POST',
       success: function (res) {
         console.log('获取好友机型列表', res);
-        if (res.data.code === '1') {
-          that.setData({
-            info: that.data.info.concat(res.data.data)
-          });
-          if (!count){
-            count = res.data.count;
-            pages = Math.ceil(count / pageSize);
-            wx.setNavigationBarTitle({ title: '好友机型（' + count + '）' })
-          }
-        }
+        that.setData({
+          info: res.data
+        });
+        console.log(that.data.info);
+        // if (!count){
+        //   count = res.data.count;
+        //   pages = Math.ceil(count / pageSize);
+        //   wx.setNavigationBarTitle({ title: '好友机型（' + count + '）' })
+        // }
       }, complete() {
         wx.hideLoading();
       }

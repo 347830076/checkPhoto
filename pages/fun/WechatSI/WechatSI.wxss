@@ -1,3 +1,6 @@
+page{
+  padding-bottom: 20rpx;
+}
 .tag{
   display: flex;
   align-items: center;

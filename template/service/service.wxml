@@ -1,5 +1,5 @@
 <!-- 客服按钮 -->
 <view class="contact">
-  <contact-button type="default-light" size="125" session-from="雨中的鱼"></contact-button>
-  <image src="../../image/contact.png"></image>
+  <contact-button type="default-light" size="125" session-from="雨中的鱼" class="btn"></contact-button>
+  <image src="../../image/contact.png" class="img"></image>
 </view>

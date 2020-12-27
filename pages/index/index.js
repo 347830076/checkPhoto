@@ -194,18 +194,19 @@ Page({
     }
 
     wx.request({
-      url: app.globalData.serverUrl + 'Home/Small/login',
+      url: app.globalData.serverUrl + 'login',
       data: {
         code: obj.code,
         data: this.data,
         userInfo: obj.userInfo,
         p_openid: p_openid
       },
-      method: 'GET',
+      method: 'POST',
       success: function (res) {
         console.log('登录', res);
-        if (res.data.code === '1') {
+        if (res.data.status === 200) {
           openid = res.data.data.openid;
+          console.log(openid);
           //保存openid在本地缓存
           wx.setStorage({
             key: 'openid',

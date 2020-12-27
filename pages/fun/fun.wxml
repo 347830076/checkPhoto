@@ -11,10 +11,10 @@
     <text class='row_l'>长网址生成短连接网址</text>
     <text class='arrows'></text>
   </view>
-  <view class='row' bindtap="toView" data-url="WechatSI" hover-class="hoverbg">
+  <!-- <view class='row' bindtap="toView" data-url="WechatSI" hover-class="hoverbg">
     <text class='row_l'>翻译小能手</text>
     <text class='arrows'></text>
-  </view>
+  </view> -->
   <!-- <view class='row' bindtap="toView" data-url="cookbook" hover-class="hoverbg">
     <text class='row_l'>菜谱大全</text>
     <text class='arrows'></text>

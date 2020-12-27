@@ -1,69 +1,70 @@
 <view class="container">
   <view class='rowCon'>
     <text class='rowCon_l'>手机品牌：</text>
-    <text>{{brand}}</text>
+    <text>{{info.brand}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>手机型号：</text>
-    <text>{{model}}</text>
+    <text>{{info.model}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>客户端平台：</text>
-    <text>{{platform}}</text>
+    <text>{{info.platform}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>操作系统版本：</text>
-    <text>{{system}}</text>
+    <text>{{info.system}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>微信版本号：</text>
-    <text>{{version}}</text>
+    <text>{{info.version}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>基础库版本：</text>
-    <text>{{sdkversion}}</text>
+    <text>{{info.SDKVersion}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>设备像素比：</text>
-    <text>{{pixelratio}}</text>
+    <text>{{info.pixelRatio}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>状态栏的高度：</text>
-    <text>{{statusbarheight}}</text>
+    <text>{{info.statusBarHeight}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>屏幕宽度：</text>
-    <text>{{screenwidth}}</text>
+    <text>{{info.screenWidth}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>屏幕高度：</text>
-    <text>{{screenheight}}</text>
+    <text>{{info.screenHeight}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>可使用窗口宽度：</text>
-    <text>{{windowwidth}}</text>
+    <text>{{info.windowWidth}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>可使用窗口高度：</text>
-    <text>{{windowheight}}</text>
+    <text>{{info.windowHeight}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>用户字体大小：</text>
-    <text>{{fontsizesetting}}</text>
+    <text>{{info.fontSizeSetting}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>当前网络状态：</text>
-    <text>{{networktype}}</text>
+    <text>{{info.networkType}}</text>
   </view>
   <view class='rowCon'>
     <text class='rowCon_l'>是否支持NFC：</text>
-    <text>{{nfc}}</text>
+    <text>{{info.nfc}}</text>
   </view>
   <view hidden='{{!benchmarklevel}}'>
     <view class='rowCon'>
       <text class='rowCon_l'>性能等级：</text>
-      <text>{{benchmarklevel}}</text>
+      <text>{{info.benchmarklevel}}</text>
     </view>
-    <view style='font-size:20rpx;color:#999;'>(仅Android) -2 或 0：该设备无法运行小游戏，-1：性能未知，>=1 设备性能值，该值越高，设备性能越好 (目前设备最高不到50)</view>
+    <view style='font-size:20rpx;color:#999;'>(仅Android) -2 或 0：该设备无法运行小游戏，-1：性能未知，>=1 设备性能值，该值越高，设备性能越好 (目前设备最高不到50)
+    </view>
   </view>
 </view>
