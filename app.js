@@ -18,7 +18,7 @@ App({
   globalData: {
     userInfo: null,
     serverUrl: 'http://api.wanggege.cn/',
-    // serverUrl:'http://myphp.localhost.com/',
+    // serverUrl:'http://127.0.0.1:7001/',
   },
   // 小程序发生脚本错误，或者 api 调用失败时触发，会带上错误信息
   onError(msg) {

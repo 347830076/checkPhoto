@@ -193,31 +193,31 @@ Page({
       that.setClip();
     }
 
-    wx.request({
-      url: app.globalData.serverUrl + 'login',
-      data: {
-        code: obj.code,
-        data: this.data,
-        userInfo: obj.userInfo,
-        p_openid: p_openid
-      },
-      method: 'POST',
-      success: function (res) {
-        console.log('登录', res);
-        if (res.data.status === 200) {
-          openid = res.data.data.openid;
-          console.log(openid);
-          //保存openid在本地缓存
-          wx.setStorage({
-            key: 'openid',
-            data: openid
-          });
-          that.setData({
-            openid: openid
-          })
+      wx.request({
+        url: app.globalData.serverUrl + 'login',
+        data: {
+          code: obj.code,
+          data: this.data,
+          userInfo: obj.userInfo,
+          p_openid: p_openid
+        },
+        method: 'POST',
+        success: function (res) {
+          console.log('登录', res);
+          if (res.data.status === 200) {
+            openid = res.data.data.openid;
+            console.log(openid);
+            //保存openid在本地缓存
+            wx.setStorage({
+              key: 'openid',
+              data: openid
+            });
+            that.setData({
+              openid: openid
+            })
+          }
         }
-      }
-    });
+      });
   },
 
   //复制设备信息
@@ -238,6 +238,7 @@ Page({
   },
   // 分享
   onShareAppMessage: function () {
+    console.log('openid', openid);
     return {
       title: '检测手机真伪小程序', // 分享标题
       path: 'pages/index/index?p_openid=' + openid,
