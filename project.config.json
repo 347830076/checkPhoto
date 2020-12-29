@@ -1,172 +1,175 @@
 {
-	"description": "项目配置文件。",
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": false,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"nodeModules": false,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.2.3",
-	"appid": "wx3a32b0c50a7ed7e4",
-	"projectname": "%E6%89%8B%E6%9C%BA%E6%A3%80%E6%B5%8B",
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 10,
-			"list": [
-				{
-					"id": 0,
-					"name": "检测列表",
-					"pathName": "pages/report/report",
-					"query": ""
-				},
-				{
-					"id": 1,
-					"name": "生成二维码",
-					"pathName": "pages/fun/creat_code/creat_code",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "扫码",
-					"pathName": "pages/scan/scan",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "回答问题",
-					"pathName": "pages/fun/answer/answer",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "菜谱大全",
-					"pathName": "pages/fun/cookbook/cookbook",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "短连接",
-					"pathName": "pages/fun/short/short",
-					"query": ""
-				},
-				{
-					"id": 6,
-					"name": "p_openid",
-					"pathName": "pages/index/index",
-					"query": "p_openid=o-WXq4hc6XZeNJ1kiRfUPJkQukng"
-				},
-				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/my/my",
-					"query": ""
-				},
-				{
-					"id": 8,
-					"name": "pages/fun/WechatSI/WechatSI",
-					"pathName": "pages/fun/WechatSI/WechatSI",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "支持开发者",
-					"pathName": "pages/my/support/support",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "1",
-					"pathName": "pages/microphone/microphone",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pages/my/support/support",
-					"pathName": "pages/my/support/support",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/my/support/support",
-					"pathName": "pages/my/support/support",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/fun/cookbook/cookbook",
-					"pathName": "pages/fun/cookbook/cookbook",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/i",
-					"pathName": "pages/rusume",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/rusume",
-					"pathName": "pages/rusume",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/resume",
-					"pathName": "pages/resume/resume",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件。",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.2.3",
+  "appid": "wx3a32b0c50a7ed7e4",
+  "projectname": "%E6%89%8B%E6%9C%BA%E6%A3%80%E6%B5%8B",
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "检测列表",
+          "pathName": "pages/report/report",
+          "query": ""
+        },
+        {
+          "id": 1,
+          "name": "生成二维码",
+          "pathName": "pages/fun/creat_code/creat_code",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "扫码",
+          "pathName": "pages/scan/scan",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "回答问题",
+          "pathName": "pages/fun/answer/answer",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "菜谱大全",
+          "pathName": "pages/fun/cookbook/cookbook",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "短连接",
+          "pathName": "pages/fun/short/short",
+          "query": ""
+        },
+        {
+          "id": 6,
+          "name": "p_openid",
+          "pathName": "pages/index/index",
+          "query": "p_openid=o-WXq4hc6XZeNJ1kiRfUPJkQukng"
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/my/my",
+          "query": ""
+        },
+        {
+          "id": 8,
+          "name": "pages/fun/WechatSI/WechatSI",
+          "pathName": "pages/fun/WechatSI/WechatSI",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "支持开发者",
+          "pathName": "pages/my/support/support",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "1",
+          "pathName": "pages/microphone/microphone",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "pages/my/support/support",
+          "pathName": "pages/my/support/support",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my/support/support",
+          "pathName": "pages/my/support/support",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/fun/cookbook/cookbook",
+          "pathName": "pages/fun/cookbook/cookbook",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/i",
+          "pathName": "pages/rusume",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/rusume",
+          "pathName": "pages/rusume",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/resume",
+          "pathName": "pages/resume/resume",
+          "scene": null
+        }
+      ]
+    }
+  }
 }
